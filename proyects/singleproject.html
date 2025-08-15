@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Miriam Reina - Proyecto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  </head>
+
+  <body class="white-header no-image-animation">
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main -->
+    <main class="white-header" id="main-content" style="display: none">
+      <!-- Portada -->
+      <div class="full-container">
+        <img id="cover-image" src="" alt="Imagen de portada del proyecto" />
+      </div>
+
+      <!-- Intro del proyecto -->
+      <section class="project-content">
+        <div class="project-content-intro">
+          <div class="project-content-year">
+            <p id="project-year"></p>
+          </div>
+          <div class="project-content-description">
+            <h1 id="project-title"></h1>
+            <p id="project-description"></p>
+          </div>
+        </div>
+
+        <div class="project-meta">
+          <div class="service-container">
+            <p><strong>Cliente</strong></p>
+            <span id="cliente"></span>
+          </div>
+          <div class="service-container">
+            <p><strong>Tipología</strong></p>
+            <span id="tipologia"></span>
+          </div>
+          <div class="service-container">
+            <p><strong>Sector</strong></p>
+            <span id="sector"></span>
+          </div>
+          <div class="service-container">
+            <p><strong>Servicios</strong></p>
+            <ul id="servicios-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contenido dinámico generado desde JSON -->
+      <div id="dynamic-content"></div>
+
+    <section class="project-content">
+        <p class="title-text">Credits</p>
+        <span id="credits"></span>
+    </section>
+
+    </main>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/loadProject.js" type="module"></script>
+  </body>
+</html>
