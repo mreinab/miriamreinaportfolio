@@ -754,7 +754,7 @@ button.tags:hover {
   width: 100%;
   padding: 40px 24px 24px;
   font-family: 'YourFont', sans-serif;
-  background-color: #fff;
+  background-color: var(--color-bg);
   color: #000;
   display: flex;
   flex-direction: column;
@@ -792,6 +792,7 @@ button.tags:hover {
 .footer-socials a {
   margin-right: 10px;
   display: inline-block;
+  color: var(--color-text);
 }
 
 .footer-right {
@@ -801,10 +802,13 @@ button.tags:hover {
   gap: 10px;
 }
 
+svg {
+  color: var(--color-text);
+}
 .footer-nav a {
   display: block;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
   margin-bottom: 5px;
 }
 
@@ -851,7 +855,7 @@ border-color: var(--color-border-light);
 .footer-links a {
   margin: 0px 15px 0px 0px;
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
 }
 
 .footer-nav a {
@@ -861,10 +865,12 @@ border-color: var(--color-border-light);
     letter-spacing: 0.5px;
   -webkit-text-stroke-width: .5px;
   margin-bottom: 8px;
+  color: var(--color-text);
 }
 .footer-language {
   display: flex;
   flex-direction: row;
+  color: var(--color-text);
 }
 
 .footer-language button {

@@ -66,38 +66,6 @@ function loadHeader() {
     });
 }
 
-// Cargar contenido dinámico (projects.html) SOLO en index.html o raíz
-function loadContent() {
-  const main = document.getElementById("main-content");
-
-  if (window.innerWidth <= 768) {
-    // Ejemplo breakpoint para mobile
-    fetch("/views/projects-mobile.html")
-      .then((res) => res.text())
-      .then((html) => {
-        main.innerHTML = html;
-        main.style.display = "block";
-        initHoverImages();
-      })
-      .catch((err) => {
-        console.error("Error al cargar contenido mobile:", err);
-        main.style.display = "block";
-      });
-  } else {
-    fetch("/views/projects-desktop.html")
-      .then((res) => res.text())
-      .then((html) => {
-        main.innerHTML = html;
-        main.style.display = "block";
-        initHoverImages();
-      })
-      .catch((err) => {
-        console.error("Error al cargar contenido desktop:", err);
-        main.style.display = "block";
-      });
-  }
-}
-
 // Al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
   loadHeader();
@@ -129,10 +97,8 @@ function initBreadcrumbs() {
     path === "/views/singleproject.html" &&
     search.startsWith("?slug=")
   ) {
-    // Extraemos slug del query param
     const params = new URLSearchParams(search);
     const slug = params.get("slug") || "";
-
     crumbs = ["proyectos", "moda", slug.replace(/-/g, " ")];
   } else {
     // Si no reconocemos la ruta, ocultamos el breadcrumb
