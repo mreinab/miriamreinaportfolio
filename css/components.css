@@ -207,7 +207,8 @@ justify-content: flex-start;
 
 @media (max-width: 768px) {
   .logo-index {
-    height: 25vh;
+    height: 100%;
+    margin-bottom: 60px;
   }
 
   #logo-img-index {
@@ -222,9 +223,11 @@ justify-content: flex-start;
 
   /* Ajuste opcional del contenedor principal */
   .container-index {
-    height: 40vh;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 0px;
+    margin-bottom: 60px;
   }
 
   .img-index-container {
@@ -241,7 +244,7 @@ justify-content: flex-start;
     line-height: var(--font-size-l);
   }
   .nav-index {
-    height: 25vh;
+    height: 100%;
     margin-bottom: 12px;
   }
 
