@@ -82,7 +82,7 @@ function initBreadcrumbs() {
   const breadcrumbContainer = document.getElementById("breadcrumb-container");
   if (!breadcrumbContainer) return;
 
-  const path = window.location.pathname; // Ejemplo: "/views/singleproject.html"
+  const path = window.location.pathname; // Ejemplo: "/projects/singleproject.html"
   const search = window.location.search; // Ejemplo: "?slug=juan-vidal"
 
   let crumbs = [];
@@ -94,7 +94,7 @@ function initBreadcrumbs() {
   } else if (path === "graphic.html") {
     crumbs = ["", "gráfico"];
   } else if (
-    path === "/views/singleproject.html" &&
+    path === "/projects/singleproject.html" &&
     search.startsWith("?slug=")
   ) {
     const params = new URLSearchParams(search);
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "juanvidal",
       img: "/assets/images/juanvidal.jpg",
-      link: "/views/singleproject.html?slug=juan-vidal",
+      link: "/projects/singleproject.html?slug=juan-vidal",
       title: "JUAN VIDAL · BRIDAL CAMPAIGN ",
       description: "Diseño inspirado en formas naturales...",
       tags: ["editorial", "creative direction"],
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "s2smagazine",
       img: "/assets/images/s2smagazine.png",
-      link: "/views/singleproject.html?slug=s2s-magazine",
+      link: "/projects/singleproject.html?slug=s2s-magazine",
       title: "Look 2",
       description: "Exploración textil contemporánea.",
       tags: ["Sostenible", "Urbano", "2025"],
@@ -317,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "collage",
       img: "/assets/images/collage.png",
-      link: "/views/singleproject.html?slug=collage",
+      link: "/projects/singleproject.html?slug=collage",
       title: "COLLAGE COLLECTION",
       description: "Inspirado en geometría urbana.",
       tags: ["Minimalismo", "Estructura", "2025"],
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "look4",
       img: "/assets/images/project-4.png",
-      link: "/views/projects/look4.html",
+      link: "/projects/singleproject.html?slug=pablopuche",
       title: "Look 4",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["Color", "Juventud", "Experimental"],
@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "pablopuche",
       img: "/assets/images/pablopuche-anne.png",
-      link: "/views/singleproject.html?slug=pablopuche",
+      link: "/projects/singleproject.html?slug=pablopuche",
       title: "TEST FOR ANNE · AMODELS",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "readytoconsume",
       img: "/assets/images/icon-readytoconsume.jpg",
-      link: "/views/singleproject.html?slug=readytoconsume",
+      link: "/projects/singleproject.html?slug=readytoconsume",
       title: "PRINTED EDITORIAL · READY TO CONSUME",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test", "editorial"],
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "issue 1",
       img: "/assets/images/icon-issue1.png",
-      link: "/views/singleproject.html?slug=readytoconsume",
+      link: "/projects/singleproject.html?slug=readytoconsume",
       title: "PRINTED EDITORIAL · READY TO CONSUME",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!slug) return;
 
   try {
-    const response = await fetch(`/views/projects/${slug}.json`);
+    const response = await fetch(`/views/fashion/${slug}.json`);
     const data = await response.json();
 
     // TEXTOS BASE

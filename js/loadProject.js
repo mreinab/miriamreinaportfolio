@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!slug) return;
 
   try {
-    const response = await fetch(`/views/projects/${slug}.json`);
+    const response = await fetch(`/projects/fashion/${slug}.json`);
     const data = await response.json();
 
     // Mostrar contenido
