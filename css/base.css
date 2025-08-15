@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'PP-Air';
+  src: url('../assets/fonts/PPAir-Regular.woff2') format('woff2');
+  font-weight: medium;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP-NeueBit';
+  src: url('../assets/fonts/PPNeueBit-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP-NeueBit';
+  src: url('../assets/fonts/PPNeueBit-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* 🎨 COLORES */
+  --color-bg: #F9F9F9;
+  --color-text: #111111;
+  --color-accent: #FFFF6F;
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-text-lighter: rgba(0, 0, 0, 0.75);
+
+  /* ✍️ TIPOGRAFÍA */
+  --font-logo: 'PP-NeueBit', 'Inter', sans-serif;
+  --font-header: 'PP-Air', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-s: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-m: 1.25rem;    /* 20px */
+  --font-size-l: 1.75rem;     /* 24px */
+  --font-size-xl: 2rem;      /* 32px */
+  --font-size-2xl: 3rem;      /* 40px */
+  --font-size-3xl: 5rem;      /* 40px */
+  --font-size-xxl: 9rem;     /* 48px */
+
+  /* 📐 SPACING (ESPACIOS) */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+
+  /* 🔲 BORDES Y RADIOS */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-full: 9999px;
+
+
+  /* 🔝 Z-INDEX */
+  --z-base: 1;
+  --z-fixed: 100;
+  --z-overlay: 1000;
+
+  /* BREAK POINTS */
+    --bp-mobile: 600px;
+
+  /* DARK MODE */
+  --color-bg-dark: #05000f;
+  --color-text-dark: #F9F9F9;
+  --color-border-dark: rgba(255, 255, 255, 0.5);
+  --color-text-lighter-dark: rgba(255, 255, 255, 0.75);
+
+}
+
+/* Styles básicos para demo rápido */
+/* Reset simple */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body, html {
+  margin: 0; 
+  padding: 0; 
+  height: fit-content;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-border: var(--color-border-dark);
+  --color-text-lighter: var(--color-text-lighter-dark);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.white-header .header a,
+body.white-header .header .breadcrumb-link,
+body.white-header .hamburger i {
+  color: white;
+}
+
+/* También puedes forzar íconos SVG si es necesario */
+body.white-header .header svg {
+  fill: white;
+}
+
+/* Solo cuando el body tiene la clase white-header */
+body.white-header .breadcrumb-current,
+body.white-header .breadcrumb-separator {
+  color: white;
+  opacity: 0.8;
+}
+
+body.white-header header.header {
+  background-color: transparent;
+}
+
+body.white-header .hamburger a.main-nav-toggle i,
+body.white-header .hamburger a.main-nav-toggle:before,
+body.white-header .hamburger a.main-nav-toggle:after {
+  background-color: var(--color-text-dark);
+}
+
+.theme-toggle {
+  cursor: pointer;
+}
+
+p {
+  color: var(--color-text);
+  line-height: 0;
+}

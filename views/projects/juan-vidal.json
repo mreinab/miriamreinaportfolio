@@ -1,0 +1,94 @@
+{
+  "year": "2024",
+  "title": "JUAN VIDAL · BRIDAL CAMPAIGN",
+  "coverImage": "/assets/images/juanvidal-bg.jpg",
+  "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+  "cliente": "Juan Vidal",
+  "tipologia": "Dirección creativa",
+  "sector": "Moda",
+  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "sections": [
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-1.jpg",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-6.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-5.jpg",
+          "class": "image-left"
+        },
+        {
+      "layout": "column-text",
+      "elements": [
+                {
+          "type": "image",
+          "src": "/assets/images/juanvidal-4.jpg",
+          "class": "image-text"
+        },
+        {
+          "type": "text",
+          "content": "COLOR",
+          "class": "text-right-title"
+        },
+        {
+          "type": "text",
+          "content": "Experiencia, una empresa especializada en actividades de aventura como puenting y barranquismo...",
+          "class": "text-right"
+        }
+      ]
+    }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-3.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-5.jpg",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-4.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-bg.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    }
+  ]
+}

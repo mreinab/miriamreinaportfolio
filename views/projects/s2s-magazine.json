@@ -1,0 +1,16 @@
+{
+  "title": "S2S MAGAZINE",
+  "coverImage": "/assets/images/s2smagazine-bg.png",
+  "intro": "Campaña de moda conceptual desarrollada para Juan Vidal.",
+  "cliente": "Juan Vidal",
+  "tipologia": "Dirección creativa",
+  "sector": "Moda",
+  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "images": [
+    "/assets/images/s2smagazine-1.jpg",
+    "/assets/images/s2smagazine-2.jpg",
+    "/assets/images/s2smagazine-3.jpg",
+    "/assets/images/s2smagazine-1.jpg",
+    "/assets/images/s2smagazine-2.jpg"
+  ]
+}
