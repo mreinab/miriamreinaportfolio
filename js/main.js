@@ -88,18 +88,18 @@ function initBreadcrumbs() {
   let crumbs = [];
 
   if (path === "/" || path === "/index.html") {
-    crumbs = ["proyectos"];
+    crumbs = [""];
   } else if (path === "/views/fashion.html") {
-    crumbs = ["proyectos", "moda"];
+    crumbs = ["", "moda"];
   } else if (path === "/views/graphic.html") {
-    crumbs = ["proyectos", "gráfico"];
+    crumbs = ["", "gráfico"];
   } else if (
     path === "/views/singleproject.html" &&
     search.startsWith("?slug=")
   ) {
     const params = new URLSearchParams(search);
     const slug = params.get("slug") || "";
-    crumbs = ["proyectos", "moda", slug.replace(/-/g, " ")];
+    crumbs = ["", "moda", slug.replace(/-/g, " ")];
   } else {
     // Si no reconocemos la ruta, ocultamos el breadcrumb
     breadcrumbContainer.style.display = "none";
