@@ -828,6 +828,7 @@ svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 a.footer-btn:hover {
 border-color: var(--color-border-light);
@@ -859,6 +860,7 @@ border-color: var(--color-border-light);
   color: var(--color-text);
 }
 
+
 .footer-nav a {
   text-align: end;
   font-family: var(--font-logo);
@@ -868,6 +870,11 @@ border-color: var(--color-border-light);
   margin-bottom: 8px;
   color: var(--color-text);
 }
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
 .footer-language {
   display: flex;
   flex-direction: row;
@@ -878,9 +885,13 @@ border-color: var(--color-border-light);
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   justify-items: end;
   color: var(--color-text);
+}
+
+.footer-language button:hover {
+  text-decoration: underline;
 }
 
 button.theme-toggle {
@@ -916,6 +927,7 @@ button.theme-toggle {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: center;
     gap: 16px;
   }
 
@@ -925,7 +937,7 @@ button.theme-toggle {
 
   .footer-mobile {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0px;
     margin-bottom: 24px;
   }
