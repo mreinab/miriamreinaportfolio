@@ -245,9 +245,8 @@ justify-content: flex-start;
   }
   .nav-index {
     height: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
-
 }
 
 
@@ -895,12 +894,36 @@ button.theme-toggle {
   .footer-top, .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    gap: 0px;
   }
   .footer-right {
-    align-items: flex-start;
+    align-items: flex-end;
   }
   .footer-btn {
     margin-top: 10px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-bottom-container p {
+    align-self: center;
+  }
+
+  .footer-mobile {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 12px 24px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
   }
 }
