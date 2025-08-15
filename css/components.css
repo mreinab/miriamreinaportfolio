@@ -227,7 +227,7 @@ justify-content: flex-start;
     flex-direction: column;
     justify-content: flex-end;
     gap: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 
   .img-index-container {
@@ -245,7 +245,7 @@ justify-content: flex-start;
   }
   .nav-index {
     height: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 
@@ -332,6 +332,7 @@ button.tags:hover {
     justify-content: center;
     justify-items: center;
     justify-self: center;
+    margin-left: 12px;
   }
 
   .span-full {
