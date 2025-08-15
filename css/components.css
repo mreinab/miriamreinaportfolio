@@ -751,6 +751,7 @@ button.tags:hover {
 
 /* FOOTER */
 .footer {
+  margin-top: 24px;
   width: 100%;
   padding: 40px 24px 24px;
   font-family: 'YourFont', sans-serif;
@@ -935,4 +936,15 @@ button.theme-toggle {
     justify-content: center;
     gap: 24px;
   }
+
+  .logo-footer-container {
+  display: flex;
+  justify-content: start;
+}
+
+.logo-index-footer {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 16px;
+}
 }
