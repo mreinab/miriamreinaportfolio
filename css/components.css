@@ -206,7 +206,7 @@ justify-content: flex-start;
 
 @media (max-width: 768px) {
   .logo-index {
-    height: auto;
+    height: 15vh;
   }
 
   #logo-img-index {
@@ -221,7 +221,7 @@ justify-content: flex-start;
 
   /* Ajuste opcional del contenedor principal */
   .container-index {
-    height: 45vh;
+    height: 55vh;
     flex-direction: column;
     gap: 16px;
   }
@@ -316,7 +316,7 @@ button.tags:hover {
 
 @media (max-width: 768px) {
   .free-container {
-    height: 400vh;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 450px auto; 

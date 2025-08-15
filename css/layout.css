@@ -139,7 +139,7 @@ svg {
 }
 
 .logo img {
-  height: 5vh; /* o el alto que desees */
+  height: 4.5vh; /* o el alto que desees */
   width: auto;
   display: block;
 }
@@ -308,8 +308,8 @@ nav.selector a:hover {
 /* HAMBURGER BUTTON ANIMATED */
 /* ----------------------------------- */
 .hamburger {
-  height: 26px;
   position: relative;
+  margin: 8px 8px 12px;
 }
 
 .hamburger a.main-nav-toggle {
