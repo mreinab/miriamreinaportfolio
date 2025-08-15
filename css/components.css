@@ -352,7 +352,11 @@ button.tags:hover {
     width: 80%;
     height: auto; /* mantiene proporción natural */
     display: block;
+    justify-items: center;
   }
+}
+
+
 
   a.project-item.span-half {
     justify-items: center;
@@ -362,11 +366,6 @@ button.tags:hover {
   a.project-item.span-full {
     justify-items: center;
   }
-}
-
-
-
-
 
 /* Para modo oscuro manual */
 .dark-mode .free-container {
