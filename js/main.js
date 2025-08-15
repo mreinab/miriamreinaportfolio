@@ -89,9 +89,9 @@ function initBreadcrumbs() {
 
   if (path === "/" || path === "/index.html") {
     crumbs = [""];
-  } else if (path === "/views/fashion.html") {
+  } else if (path === "fashion.html") {
     crumbs = ["", "moda"];
-  } else if (path === "/views/graphic.html") {
+  } else if (path === "graphic.html") {
     crumbs = ["", "gráfico"];
   } else if (
     path === "/views/singleproject.html" &&
@@ -107,9 +107,9 @@ function initBreadcrumbs() {
   }
 
   const urlMap = {
-    proyectos: "/index.html",
-    moda: "/views/fashion.html",
-    gráfico: "/views/graphic.html",
+    proyectos: "index.html",
+    moda: "fashion.html",
+    gráfico: "graphic.html",
   };
 
   let html = `<nav aria-label="breadcrumb" class="breadcrumb">`;
