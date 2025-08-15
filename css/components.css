@@ -332,7 +332,7 @@ button.tags:hover {
     justify-content: center;
     justify-items: center;
     justify-self: center;
-    margin-left: 12px;
+    padding-left: 16px;
   }
 
   .span-full {
