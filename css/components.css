@@ -185,8 +185,9 @@ justify-content: flex-start;
   }
 
   #logo-img-index {
-    height: 24vh;
+    height: 22vh;
     padding: 40px 24px 0;   /* opcional, ajustar padding proporcional */
+    
   }
 
   /* Ocultar los p dentro de los contenedores */
@@ -750,7 +751,7 @@ button.tags:hover {
 }
 
 .logo-index-footer {
-  height: 4vh;
+  height: 6vh;
   width: 100%;
   display: flex;
   justify-content: center;
