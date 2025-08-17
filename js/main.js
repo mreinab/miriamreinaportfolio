@@ -290,15 +290,17 @@ function initMenuToggle() {
   });
 }
 
-//FASHION
-
 document.addEventListener("DOMContentLoaded", () => {
+  // --- LISTADO DE PROYECTOS ---
+
+  //MODA
   const projects = [
     {
       id: "juanvidal",
       img: "/assets/images/juanvidal.jpg",
-      link: "/projects/singleproject.html?slug=juan-vidal",
-      title: "JUAN VIDAL · BRIDAL CAMPAIGN ",
+      type: "fashion",
+      slug: "juan-vidal",
+      title: "JUAN VIDAL · BRIDAL CAMPAIGN",
       description: "Diseño inspirado en formas naturales...",
       tags: ["editorial", "creative direction"],
       top: "20%",
@@ -307,7 +309,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "s2smagazine",
       img: "/assets/images/s2smagazine.png",
-      link: "/projects/singleproject.html?slug=s2s-magazine",
+      type: "fashion",
+      slug: "s2s-magazine",
       title: "Look 2",
       description: "Exploración textil contemporánea.",
       tags: ["Sostenible", "Urbano", "2025"],
@@ -317,7 +320,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "collage",
       img: "/assets/images/collage.png",
-      link: "/projects/singleproject.html?slug=collage",
+      type: "fashion",
+      slug: "collage",
       title: "COLLAGE COLLECTION",
       description: "Inspirado en geometría urbana.",
       tags: ["Minimalismo", "Estructura", "2025"],
@@ -327,7 +331,8 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "look4",
       img: "/assets/images/project-4.png",
-      link: "/projects/singleproject.html?slug=pablopuche",
+      type: "fashion",
+      slug: "pablopuche",
       title: "Look 4",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["Color", "Juventud", "Experimental"],
@@ -337,52 +342,50 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       id: "pablopuche",
       img: "/assets/images/pablopuche-anne.png",
-      link: "/projects/singleproject.html?slug=pablopuche",
+      type: "fashion",
+      slug: "pablopuche",
       title: "TEST FOR ANNE · AMODELS",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
       top: "5%",
       left: "25%",
     },
+  ];
+
+  //GRAFICO
+  const graphicProjects = [
     {
-      id: "readytoconsume",
-      img: "/assets/images/icon-readytoconsume.jpg",
-      link: "/projects/singleproject.html?slug=readytoconsume",
-      title: "PRINTED EDITORIAL · READY TO CONSUME",
-      description: "Colores vibrantes y energía juvenil.",
-      tags: ["styling", "model test", "editorial"],
-      top: "95",
-      left: "15%",
-    },
-    {
-      id: "issue 1",
-      img: "/assets/images/icon-issue1.png",
-      link: "/projects/singleproject.html?slug=readytoconsume",
-      title: "PRINTED EDITORIAL · READY TO CONSUME",
+      id: "pablopuche-graphic",
+      img: "/assets/images/pablopuche-anne.png",
+      type: "graphic",
+      slug: "mymagazine",
+      title: "TEST FOR ANNE · AMODELS",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
-      top: "95",
-      left: "15%",
-    },
-    {
-      id: "circle1",
-      img: "/assets/images/circle-yellow.png",
       top: "5%",
       left: "25%",
     },
+  ];
+
+  //WEB
+  const webProjects = [
     {
-      id: "circle2",
-      img: "/assets/images/circle-yellow.png",
-      top: "35%",
-      left: "75%",
+      id: "pablopuche-web",
+      img: "/assets/images/pablopuche-anne.png",
+      type: "web",
+      slug: "flower",
+      title: "TEST FOR ANNE · AMODELS",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["styling", "model test"],
+      top: "5%",
+      left: "25%",
     },
   ];
 
-  const container = document.getElementById("fashion-projects");
-  if (!container) {
-    console.error("No se encontró el contenedor #fashion-projects");
-    return;
-  }
+  // --- CONTENEDORES ---
+  const fashionContainer = document.getElementById("fashion-projects");
+  const graphicContainer = document.getElementById("graphic-projects");
+  const webContainer = document.getElementById("web-projects");
 
   const tooltip = document.getElementById("project-description");
   const tooltipTitle = document.getElementById("tooltip-title");
@@ -394,83 +397,84 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedPositions = JSON.parse(
     localStorage.getItem("projectPositions") || "{}"
   );
-
   const isMobile = window.innerWidth <= 768;
-  let mobilePatternCounter = 0; // para controlar el patrón
+  let mobilePatternCounter = 0;
 
-  // Renderizar proyectos
-  projects.forEach((project) => {
-    const a = document.createElement("a");
-    a.href = project.link || "#";
-    a.className = "project-item";
-    a.style.position = isMobile ? "static" : "absolute";
-    a.style.cursor = isMobile ? "default" : "grab";
-    a.setAttribute("data-id", project.id);
-    a.setAttribute(
-      "data-tags",
-      project.tags ? project.tags.map((t) => t.toLowerCase()).join(",") : ""
-    );
+  // --- FUNCION DE RENDERIZADO ---
+  function renderProjects(projectList, targetContainer) {
+    if (!targetContainer) return;
 
-    const img = document.createElement("img");
-    img.src = project.img;
-    img.alt = project.id;
-    img.draggable = false;
+    projectList.forEach((project) => {
+      const a = document.createElement("a");
+      a.href =
+        project.slug && project.type
+          ? `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`
+          : "#";
+      a.className = "project-item";
+      a.style.position = isMobile ? "static" : "absolute";
+      a.style.cursor = isMobile ? "default" : "grab";
+      a.setAttribute("data-id", project.id);
+      a.setAttribute(
+        "data-tags",
+        project.tags ? project.tags.map((t) => t.toLowerCase()).join(",") : ""
+      );
 
-    if (!project.link) {
-      a.classList.add("decorative");
-      img.style.width = "12px";
-      img.style.height = "12px";
-    }
+      const img = document.createElement("img");
+      img.src = project.img;
+      img.alt = project.id;
+      img.draggable = false;
 
-    if (isMobile) {
-      // Asignar patrón: dos medios, uno completo
-      if (mobilePatternCounter % 3 === 2) {
-        a.classList.add("span-full");
-      } else {
-        a.classList.add("span-half");
+      if (!project.slug) {
+        a.classList.add("decorative");
+        img.style.width = "12px";
+        img.style.height = "12px";
       }
-      mobilePatternCounter++;
-    } else {
-      const saved = savedPositions[project.id];
-      if (saved) {
-        a.style.top = saved.top;
-        a.style.left = saved.left;
+
+      if (isMobile) {
+        if (mobilePatternCounter % 3 === 2) {
+          a.classList.add("span-full");
+        } else {
+          a.classList.add("span-half");
+        }
+        mobilePatternCounter++;
       } else {
-        a.style.top = project.top;
-        a.style.left = project.left;
+        const saved = savedPositions[project.id];
+        if (saved) {
+          a.style.top = saved.top;
+          a.style.left = saved.left;
+        } else {
+          a.style.top = project.top;
+          a.style.left = project.left;
+        }
       }
-    }
 
-    a.appendChild(img);
-    container.appendChild(a);
+      a.appendChild(img);
+      targetContainer.appendChild(a);
 
-    // Tooltip en desktop
-    if (project.description && !isMobile) {
-      a.addEventListener("mouseenter", () => {
-        tooltipTitle.textContent = project.title || "";
-        tooltipDescription.textContent = project.description || "";
-        tooltipTags.innerHTML = project.tags
-          ? project.tags
-              .map((tag) => `<span class="tag">${tag}</span>`)
-              .join(" ")
-          : "";
-        tooltipCTA.textContent = project.cta || "";
-        tooltipCTA.href = project.link || "#";
-        tooltip.classList.add("show");
-      });
+      if (project.description && !isMobile) {
+        a.addEventListener("mouseenter", () => {
+          tooltipTitle.textContent = project.title || "";
+          tooltipDescription.textContent = project.description || "";
+          tooltipTags.innerHTML = project.tags
+            ? project.tags
+                .map((tag) => `<span class="tag">${tag}</span>`)
+                .join(" ")
+            : "";
+          tooltipCTA.textContent = project.cta || "";
+          tooltipCTA.href = project.link || "#";
+          tooltip.classList.add("show");
+        });
+        a.addEventListener("mouseleave", () => {
+          tooltip.classList.remove("show");
+        });
+      }
 
-      a.addEventListener("mouseleave", () => {
-        tooltip.classList.remove("show");
-      });
-    }
+      if (!isMobile) enableDrag(a, project.id, targetContainer);
+    });
+  }
 
-    if (!isMobile) {
-      enableDrag(a, project.id);
-    }
-  });
-
-  // Función de drag (solo desktop)
-  function enableDrag(element, id) {
+  // --- FUNCION DE DRAG ---
+  function enableDrag(element, id, containerRef) {
     let isDragging = false;
     let offsetX = 0,
       offsetY = 0;
@@ -491,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", (e) => {
       if (!isDragging) return;
       moved = true;
-      const containerRect = container.getBoundingClientRect();
+      const containerRect = containerRef.getBoundingClientRect();
       const elementRect = element.getBoundingClientRect();
       let x = e.clientX - offsetX - containerRect.left;
       let y = e.clientY - offsetY - containerRect.top;
@@ -499,8 +503,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (y < margin) y = margin;
       if (x > containerRect.width - elementRect.width - margin)
         x = containerRect.width - elementRect.width - margin;
-      if (y > containerRect.height - elementRect.height - margin)
-        y = containerRect.height - elementRect.height - margin;
+      if (y > containerRef.offsetHeight - elementRect.height - margin)
+        y = containerRef.offsetHeight - elementRect.height - margin;
       element.style.left = `${x}px`;
       element.style.top = `${y}px`;
     });
@@ -519,12 +523,14 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           { once: true }
         );
-        const containerRect = container.getBoundingClientRect();
+
+        const containerRect = containerRef.getBoundingClientRect();
         const elementRect = element.getBoundingClientRect();
         const leftPercent =
           ((elementRect.left - containerRect.left) / containerRect.width) * 100;
         const topPercent =
           ((elementRect.top - containerRect.top) / containerRect.height) * 100;
+
         const currentPositions = JSON.parse(
           localStorage.getItem("projectPositions") || "{}"
         );
@@ -543,89 +549,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     element.addEventListener("dragstart", (e) => e.preventDefault());
   }
-});
 
-// CARGAR PLANTILLAS SINGLE PROJECT
-document.addEventListener("DOMContentLoaded", async () => {
+  // --- RENDERIZADO ---
+  renderProjects(projects, fashionContainer);
+  renderProjects(graphicProjects, graphicContainer);
+  renderProjects(webProjects, webContainer);
+
+  // --- CARGAR SINGLE PROJECT ---
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("slug");
+  const type = params.get("type") || "fashion";
 
-  if (!slug) return;
-
-  try {
-    const response = await fetch(`/views/fashion/${slug}.json`);
-    const data = await response.json();
-
-    // TEXTOS BASE
-    document.getElementById("project-year").textContent = data.year;
-    document.getElementById("project-title").textContent = data.title;
-    document.getElementById("project-description").textContent =
-      data.description;
-    document.getElementById("cliente").textContent = data.cliente;
-    document.getElementById("tipologia").textContent = data.tipologia;
-    document.getElementById("sector").textContent = data.sector;
-
-    // COVER IMAGE
-    const coverImage = document.getElementById("cover-image");
-    if (coverImage && data.coverImage) {
-      coverImage.src = data.coverImage;
-      coverImage.alt = data.title;
-    }
-
-    // SERVICIOS
-    const serviciosList = document.getElementById("servicios-list");
-    if (serviciosList) {
-      serviciosList.innerHTML = "";
-      data.servicios.forEach((s) => {
-        const li = document.createElement("li");
-        li.textContent = s;
-        serviciosList.appendChild(li);
-      });
-    }
-
-    // PRIMERA GALERÍA (images)
-    const gallery = document.getElementById("image-gallery");
-    if (gallery && Array.isArray(data.images)) {
-      gallery.innerHTML = "";
-      data.images.forEach((src) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = data.title;
-        gallery.appendChild(img);
-      });
-    }
-
-    // BLOQUE DE TEXTO ADICIONAL (info-1)
-    const infoBlock = document.getElementById("info-1");
-    if (infoBlock && data["info-1"]) {
-      infoBlock.textContent = data["info-1"];
-    }
-
-    // SEGUNDA GALERÍA (images2)
-    const gallery2 = document.getElementById("image-gallery-2");
-    if (gallery2 && Array.isArray(data.images2)) {
-      gallery2.innerHTML = "";
-      data.images2.forEach((src) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = data.title;
-        gallery2.appendChild(img);
-      });
-    }
-
-    // TERCERA GALERÍA (images3)
-    const gallery3 = document.getElementById("image-gallery-3");
-    if (gallery3 && Array.isArray(data.images3)) {
-      gallery3.innerHTML = "";
-      data.images3.forEach((src) => {
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = data.title;
-        gallery3.appendChild(img);
-      });
-    }
-  } catch (err) {
-    console.error("Error al cargar el proyecto:", err);
+  if (slug) {
+    fetch(`/projects/${type}/${slug}.json`)
+      .then((res) => {
+        if (!res.ok)
+          throw new Error(`No se encontró /projects/${type}/${slug}.json`);
+        return res.json();
+      })
+      .then((data) => {
+        document.getElementById("project-title").textContent = data.title || "";
+        document.getElementById("project-description").textContent =
+          data.description || "";
+        document.getElementById("project-image").src = data.img || "";
+      })
+      .catch((err) => console.error(err));
   }
 });
 

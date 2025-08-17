@@ -1,16 +1,31 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("slug");
+  const type = params.get("type") || "fashion";
 
-  if (!slug) return;
+  if (slug) {
+    // Cargar proyecto individual
+    await loadProject(slug, type);
+  } else {
+    // Cargar todos los proyectos del tipo
+    await loadAllProjects(type);
+  }
+});
 
+async function loadProject(slug, type) {
   try {
-    const response = await fetch(`/projects/fashion/${slug}.json`);
+    const response = await fetch(`/projects/${type}/${slug}.json`);
+    if (!response.ok)
+      throw new Error(
+        `No se encontró el proyecto: /projects/${type}/${slug}.json`
+      );
     const data = await response.json();
 
-    // Mostrar contenido
-    document.getElementById("main-content").style.display = "block";
-    document.title = `Miriam Reina - ${data.title}`;
+    // Mostrar contenido principal
+    const mainContent = document.getElementById("main-content");
+    mainContent.style.display = "block";
+    mainContent.classList.add(type);
+    document.title = `Miriam Reina - ${data.title} [${type}]`;
 
     // Datos principales
     document.getElementById("project-year").textContent = data.year;
@@ -40,12 +55,41 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    // Render dinámico de secciones con soporte para layouts anidados
+    // Render dinámico de secciones
     renderSections(data.sections, data.title);
   } catch (err) {
     console.error("Error al cargar el proyecto:", err);
   }
-});
+}
+
+async function loadAllProjects(type) {
+  try {
+    const response = await fetch(`/projects/${type}/index.json`);
+    if (!response.ok)
+      throw new Error(`No se pudo cargar index.json para ${type}`);
+    const projects = await response.json();
+
+    const container = document.getElementById(`${type}-projects`);
+    if (!container) return;
+
+    projects.forEach((p) => {
+      const div = document.createElement("div");
+      div.classList.add("project-card");
+      div.innerHTML = `
+        <a href="?slug=${p.slug}&type=${type}">
+          <img src="${p.coverImage}" alt="${p.title}">
+          <h3>${p.title}</h3>
+          <p>${p.year}</p>
+        </a>
+      `;
+      container.appendChild(div);
+    });
+
+    container.style.display = "grid"; // o el estilo que tengas para tu grid
+  } catch (err) {
+    console.error("Error al cargar proyectos:", err);
+  }
+}
 
 function renderSections(sections, title) {
   const container = document.getElementById("dynamic-content");
@@ -53,13 +97,11 @@ function renderSections(sections, title) {
 
   container.innerHTML = "";
 
-  // Función recursiva para renderizar elementos (y layouts anidados)
   function renderElements(elements) {
     const fragment = document.createDocumentFragment();
 
     elements.forEach((element) => {
       if (element.layout && element.elements) {
-        // Crear contenedor con clase según el layout (row, column, column-text)
         const layoutDiv = document.createElement("div");
 
         switch (element.layout) {
@@ -75,29 +117,17 @@ function renderSections(sections, title) {
             break;
         }
 
-        if (element.class) {
-          layoutDiv.classList.add(element.class);
-        }
-
-        if (element.full) {
-          layoutDiv.classList.add("full");
-        }
+        if (element.class) layoutDiv.classList.add(element.class);
+        if (element.full) layoutDiv.classList.add("full");
 
         const children = renderElements(element.elements);
         layoutDiv.appendChild(children);
 
         fragment.appendChild(layoutDiv);
       } else {
-        // Elemento simple: imagen o texto
         const block = document.createElement("div");
-
-        if (element.class) {
-          block.classList.add(element.class);
-        }
-
-        if (element.full) {
-          block.classList.add("full");
-        }
+        if (element.class) block.classList.add(element.class);
+        if (element.full) block.classList.add("full");
 
         if (element.type === "image") {
           const img = document.createElement("img");
@@ -133,13 +163,8 @@ function renderSections(sections, title) {
         break;
     }
 
-    if (section.class) {
-      sectionDiv.classList.add(section.class);
-    }
-
-    if (section.full) {
-      sectionDiv.classList.add("full");
-    }
+    if (section.class) sectionDiv.classList.add(section.class);
+    if (section.full) sectionDiv.classList.add("full");
 
     const content = renderElements(section.elements);
     sectionDiv.appendChild(content);
