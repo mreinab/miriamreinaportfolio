@@ -180,16 +180,14 @@ justify-content: flex-start;
 
 @media (max-width: 768px) {
   .logo-index {
-    height: 100%;
+    height: 80%;
     margin-bottom: 60px;
-    max-height: 200px;
   }
   
 
   #logo-img-index {
     height: 24vh;
     padding: 40px 0 0;   /* opcional, ajustar padding proporcional */
-    margin: 0px 24px;
   }
 
   /* Ocultar los p dentro de los contenedores */
@@ -866,6 +864,7 @@ border-color: var(--color-border-light);
   color: var(--color-text);
   font-family: var(--font-logo);
   font-weight: bold;
+  padding: 0px 6px;
 }
 
 .footer-language button:hover {
