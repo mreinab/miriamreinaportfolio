@@ -182,12 +182,14 @@ justify-content: flex-start;
   .logo-index {
     height: 100%;
     margin-bottom: 60px;
+    max-height: 200px;
   }
+  
 
   #logo-img-index {
-    height: 22vh;
-    padding: 40px 24px 0;   /* opcional, ajustar padding proporcional */
-    
+    height: 24vh;
+    padding: 40px 0 0;   /* opcional, ajustar padding proporcional */
+    margin: 0px 24px;
   }
 
   /* Ocultar los p dentro de los contenedores */
