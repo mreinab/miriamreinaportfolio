@@ -185,8 +185,8 @@ justify-content: flex-start;
   }
 
   #logo-img-index {
-    height: 24vh;
-    padding: 40px 0 0;   /* opcional, ajustar padding proporcional */
+    height: 22vh;
+    padding: 40px 20px 0;   /* opcional, ajustar padding proporcional */
   }
 
   /* Ocultar los p dentro de los contenedores */
@@ -858,9 +858,11 @@ border-color: var(--color-border-light);
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 1rem;
   justify-items: end;
   color: var(--color-text);
+  font-family: var(--font-logo);
+  font-weight: bold;
 }
 
 .footer-language button:hover {
