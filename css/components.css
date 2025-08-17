@@ -233,7 +233,7 @@ justify-content: flex-start;
 .free-container {
   position: relative;
   width: 100%;
-  height: 200vh; /* o lo que necesites para el contenido */
+  height: 500vh; /* o lo que necesites para el contenido */
   overflow: hidden;
 
   background-image: url("/assets/images/bg-dots.png");
