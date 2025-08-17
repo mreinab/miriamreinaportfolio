@@ -932,7 +932,7 @@ button.theme-toggle {
   }
 
   .footer-bottom-container p {
-    align-self: center;
+    align-self: flex-end;
   }
 
   .footer-mobile {
@@ -945,7 +945,7 @@ button.theme-toggle {
   .footer-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 24px;
   }
 
@@ -958,5 +958,11 @@ button.theme-toggle {
   max-width: 60%;
   height: auto;
   margin-bottom: 16px;
+}
+
+.footer-links a {
+  margin: 0px;
+  text-decoration: none;
+  color: var(--color-text);
 }
 }
