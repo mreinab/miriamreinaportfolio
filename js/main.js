@@ -350,6 +350,29 @@ document.addEventListener("DOMContentLoaded", () => {
       top: "5%",
       left: "25%",
     },
+    {
+      id: "issue 1",
+      img: "/assets/images/icon-issue1.png",
+      type: "fashion",
+      slug: "s2s-magazine",
+      title: "PRINTED EDITORIAL · READY TO CONSUME",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["styling", "model test"],
+      top: "95",
+      left: "15%",
+    },
+    {
+      id: "circle1",
+      img: "/assets/images/circle-yellow.png",
+      top: "5%",
+      left: "25%",
+    },
+    {
+      id: "circle2",
+      img: "/assets/images/circle-yellow.png",
+      top: "35%",
+      left: "75%",
+    },
   ];
 
   //GRAFICO
