@@ -120,6 +120,8 @@ body.white-header .breadcrumb-separator {
 
 body.white-header header.header {
   background-color: transparent;
+  color: black;
+    mix-blend-mode: difference;
 }
 
 body.white-header .hamburger a.main-nav-toggle i,

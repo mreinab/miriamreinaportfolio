@@ -1,13 +1,24 @@
 {
   "year": "2024",
-  "title": "READY TO CONSUME GIVES ME ANXIETY · PRINTED EDITORIAL",
+  "title": "READY-TO-CONSUME IS GIVING ME ANXIETY · PRINTED EDITORIAL",
   "coverImage": "/assets/images/readytoconsume-bg.png",
-  "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+  "description": "“Ready-to-consume is giving me anxiety” es una editorial publicada en S2S Magazine, una revista indie que da visibilidad a estudiantes y recién graduados en diseño de moda en España. La propuesta reflexiona críticamente sobre el ritmo acelerado con el que consumimos contenidos en la era digital, trasladando esa tensión al lenguaje de la moda. Para ello se trabajó con prendas de diseñadores graduados en 2024 en distintas escuelas y universidades españolas, reivindicando la frescura y autenticidad de sus miradas emergentes.",
   "cliente": "S2S MAGAZINE",
-  "tipologia": "Dirección creativa, estilismo",
-  "sector": "Moda",
+  "tipologia": "Editorial de moda",
+  "sector": "Comunicación visual",
   "servicios": ["Dirección de arte", "Estilismo", "Casting"],
   "sections": [
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/readytoconsume.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
     {
       "layout": "row",
       "elements": [
@@ -70,5 +81,5 @@
       ]
     }
   ],
-  "credits": "Ionela Bona [ayudante de estilismo], Miriam Reina [estilista]"
+  "credits": "Fotógrafia Alicia Pastor [@aliciapastorva] · Estilismo + dirección creativa Miriam Reina [@mimilovesdots] · Ayudante de estilismo Ionela Bona [@linboni] · Talent Mariya Muntyan [@meerm_] · Talent Clara Guiñón [@clara.guinon] · MUA Clara Monroe [@monrue.clara] · Hair Yumi García [@muabyyumigarcia] "
 }

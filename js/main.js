@@ -296,6 +296,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //MODA
   const projects = [
     {
+      id: "issue 1",
+      img: "/assets/images/readytoconsume-00-icon.jpg",
+      type: "fashion",
+      slug: "readytoconsume",
+      title: "PRINTED EDITORIAL · READY-TO-CONSUME",
+      description:
+        "Editorial publicado en una revista indie que da visibilidad a graduados en diseño de moda...",
+      tags: ["estilismo", "dirección"],
+      top: "95",
+      left: "15%",
+    },
+    {
       id: "juanvidal",
       img: "/assets/images/juanvidal.jpg",
       type: "fashion",
@@ -361,6 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
       top: "95",
       left: "15%",
     },
+
     {
       id: "circle1",
       img: "/assets/images/circle-yellow.png",
@@ -597,6 +610,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("project-image").src = data.img || "";
       })
       .catch((err) => console.error(err));
+  }
+
+  function renderMoreProjects(allProjects, currentSlug) {
+    const container = document.getElementById("more-projects-scroll");
+    if (!container) return;
+
+    allProjects
+      .filter((project) => project.slug && project.slug !== currentSlug) // <-- solo proyectos con slug
+      .forEach((project) => {
+        const img = document.createElement("img");
+        img.src = project.img;
+        img.alt = project.title || project.id;
+        img.addEventListener("click", () => {
+          window.location.href = `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`;
+        });
+        container.appendChild(img);
+      });
+  }
+
+  // --- Ejecutar la función ---
+  if (slug) {
+    renderMoreProjects(projects, slug); // si quieres solo moda
+    // si quieres todos los tipos:
+    // renderMoreProjects([...projects, ...graphicProjects, ...webProjects], slug);
   }
 });
 
