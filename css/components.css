@@ -305,9 +305,8 @@ button.tags:hover {
 @media (max-width: 768px) {
   .free-container {
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 450px auto; 
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     background-image: url("/assets/images/bg-dots-mobile.png");
     align-items: center;
@@ -655,6 +654,11 @@ span#credits {
   font-size: var(--font-size-base);
   line-height: var(--font-size-l);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a.project-item {
+  display: flex;
+  justify-content: center;
 }
 
 /* === RESPONSIVE === */

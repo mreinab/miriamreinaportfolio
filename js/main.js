@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "juanvidal",
-      img: "/assets/images/juanvidal.jpg",
+      img: "/assets/images/juanvidal-00-icon.jpg",
       type: "fashion",
       slug: "juan-vidal",
       title: "JUAN VIDAL · BRIDAL CAMPAIGN",
