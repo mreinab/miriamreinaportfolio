@@ -959,7 +959,7 @@ button.theme-toggle {
   }
 
   .footer-bottom-container p {
-    align-self: flex-end;
+    align-self: center;
   }
 
   .footer-mobile {
@@ -972,11 +972,12 @@ button.theme-toggle {
   .footer-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 24px;
   }
 
   .footer-language {
+    margin-top: 12px;
     width: 100%;
     justify-content: flex-end;
   }
