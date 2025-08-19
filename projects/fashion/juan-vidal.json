@@ -42,17 +42,13 @@
       ]
     },
     {
-      "layout": "row",
+      "layout": "column",
       "elements": [
         {
           "type": "image",
           "src": "/assets/images/juanvidal-1.jpg",
-          "class": "image-left"
-        },
-        {
-          "type": "image",
-          "src": "/assets/images/juanvidal-6.jpg",
-          "class": "image-right"
+          "class": "image-full",
+          "full": true
         }
       ]
     },
@@ -61,15 +57,60 @@
       "elements": [
         {
           "type": "image",
-          "src": "/assets/images/juanvidal-5.jpg",
+          "src": "/assets/images/juanvidal-4.jpg",
           "class": "image-left"
         },
         {
           "type": "image",
-          "src": "/assets/images/juanvidal-4.jpg",
+          "src": "/assets/images/juanvidal-7.jpg",
           "class": "image-right"
         }
       ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-6.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-8.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-9.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/juanvidal-10.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
     }
-  ]
+  ],
+    "credits": "Fotógrafia Alicia Pastor [@aliciapastorva] · Estilismo + dirección creativa Miriam Reina [@mimilovesdots] · Ayudante de estilismo Ionela Bona [@linboni] · Talent Mariya Muntyan [@meerm_] · Talent Clara Guiñón [@clara.guinon] · MUA Clara Monroe [@monrue.clara] · Hair Yumi García [@muabyyumigarcia] "
 }
