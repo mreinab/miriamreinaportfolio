@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "title": "JUAN VIDAL · BRIDAL CAMPAIGN",
+  "title": "JUAN VIDAL · CAMPAÑA DE NOVIA",
   "coverImage": "/assets/images/juanvidal-bg.png",
-  "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+  "description": "Campaña de lanzamiento de la primera colección de vestidos de novia de Juan Vidal, firma madrileña reconocida por su visión contemporánea y femenina, nace de la colaboración con el Máster de Estilismo y Dirección Creativa de Barreira, Valencia. El proyecto se desarrolla en formato de fotografía de estudio, enriquecida con técnicas de collage y mixed-media, explorando nuevas formas de narrar el universo nupcial desde una perspectiva artística.",
   "cliente": "Juan Vidal",
-  "tipologia": "Dirección creativa",
-  "sector": "Moda",
-  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "tipologia": "Campaña de moda",
+  "sector": "Novias",
+  "servicios": ["Dirección de arte", "Dirección creativa", "Casting", "Postproducción"],
   "sections": [
         {
       "layout": "column",
@@ -112,5 +112,5 @@
       ]
     }
   ],
-    "credits": "Fotógrafia Alicia Pastor [@aliciapastorva] · Estilismo + dirección creativa Miriam Reina [@mimilovesdots] · Ayudante de estilismo Ionela Bona [@linboni] · Talent Mariya Muntyan [@meerm_] · Talent Clara Guiñón [@clara.guinon] · MUA Clara Monroe [@monrue.clara] · Hair Yumi García [@muabyyumigarcia] "
+    "credits": "Fotografía Sonia Sabnani [@soniasabnani] · Diseñador Juan Vidal [@mrjuanvidal] · Casting Carmen Duran [@carmenduranagency] · Talent Mariya Muntyan [@meerm_] · Talent Fatou [@enansyu] · MUAH Let’s Make Up [@letsmakeupschool] · Kuki Giménez [@kukigimenezp] · Jucoma [@jucoma21] ·Dirección Máster Estilismo y Dirección Creativa Elena Giménez [@elenagimenezv] · Isabela García [@isabelagarciamoreno] · Barreira Arte y Diseño [@barreira_arte_y_diseno] · Dirección Creativa Sara Orquín [@sagadeseras] · Laura Rosario [@laurarthv] · Miriam Reina [@mimimeeboo] · Elena Martínez [@mapiupiu] · Estilismo Alba Salas [@as.salasdesign] · Gianella Tarantino [@gianellatarantino] · Belén Morán [@brunetterebellion] · Sara Orquín [@sagadeseras] · Dirección de Arte Adrián Díaz [@adrianrogz] · Nerea Tagliaferro [@neretagliaferro] · Producción + Dirección Acting María Coppola [@mc.] · Natalie Chauvel [@nat.chauvel] · Gema Girón [@ggiron_gp] · Postproducción Miriam Reina [@mimimeeboo] · María Coppola [@mc.] · Elena Martínez [@mapiupiu] · Supervisión Postproducción Adrián Díaz [@adrianrogz] · Gianella Tarantino [@gianellatarantino] · Laura Rosario [@unaluua_]"
 }

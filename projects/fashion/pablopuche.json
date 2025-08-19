@@ -1,16 +1,45 @@
 {
-  "title": "PABLO PUCHE",
-  "coverImage": "/assets/images/pablopuche-anne-bg.png",
-  "intro": "Campaña de moda conceptual desarrollada para Juan Vidal.",
-  "cliente": "Juan Vidal",
-  "tipologia": "Dirección creativa",
+  "title": "TEST PARA ANNA E.",
+  "coverImage": "/assets/images/pablopuche-annetest-bg.png",
+  "description": "Fotos de book/test realizadas en estudio por el fotógrafo valenciano Pablo Puche [@pablopuche] para la modelo holandesa Anna Elisabeth Eikendal [@annaeikendal], representada por la agencia Carmen Duran.",
+  "cliente": "Agencia de modelos Carmen Duran",
+  "tipologia": "Test Modelo",
   "sector": "Moda",
-  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
-  "images": [
-    "/assets/images/s2smagazine-1.jpg",
-    "/assets/images/s2smagazine-2.jpg",
-    "/assets/images/s2smagazine-3.jpg",
-    "/assets/images/s2smagazine-1.jpg",
-    "/assets/images/s2smagazine-2.jpg"
-  ]
+  "servicios": ["Estilismo"],
+  "sections": [
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/pablopuche-01.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/pablopuche-03.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/pablopuche-02.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    }
+  ],
+  "credits": "Fotógrafo Pablo Puche [@pablopuche] · Talent Anna Eikendal [@annaeikendal] · Agencia Carmen Duran [@carmenduranagency] · MUAH [@beautynefer] · Asistentes de fotografía [@almnacho] [@puk440044]"
 }
