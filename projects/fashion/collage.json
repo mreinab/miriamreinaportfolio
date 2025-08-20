@@ -1,16 +1,112 @@
 {
+  "year": "2024",
   "title": "COLLAGE",
-  "coverImage": "/assets/images/collage-bg.png",
-  "intro": "Campaña de moda conceptual desarrollada para Juan Vidal.",
+  "coverImage": "/assets/images/collage-bg.gif",
+  "description": "Campaña de moda conceptual desarrollada para Juan Vidal.",
   "cliente": "Juan Vidal",
   "tipologia": "Dirección creativa",
   "sector": "Moda",
   "servicios": ["Dirección de arte", "Estilismo", "Casting"],
-  "images": [
-    "/assets/images/s2smagazine-1.jpg",
-    "/assets/images/s2smagazine-2.jpg",
-    "/assets/images/s2smagazine-3.jpg",
-    "/assets/images/s2smagazine-1.jpg",
-    "/assets/images/s2smagazine-2.jpg"
+  "sections": [
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage.png",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-01.png",
+          "class": "image-right"
+        }
+      ]
+    },
+          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-03.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-04.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-05.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-09.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+            {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-10.png",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-11.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+            {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-12.jpg",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-13.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+              {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-14.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    }    
   ]
 }

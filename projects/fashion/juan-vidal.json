@@ -8,7 +8,7 @@
   "sector": "Novias",
   "servicios": ["Dirección de arte", "Dirección creativa", "Casting", "Postproducción"],
   "sections": [
-        {
+      {
       "layout": "column",
       "elements": [
         {
@@ -18,7 +18,7 @@
           "full": true
         }
       ]
-    },
+      },
         {
       "layout": "column",
       "elements": [
