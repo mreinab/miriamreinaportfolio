@@ -1,0 +1,49 @@
+    {
+    "year": "2024",
+    "title": "WINDABLE COLECCIÓN",
+    "coverImage": "/assets/images/windable-bg.png",
+    "cliente": "-",
+    "tipologia": "Fotografía",
+    "sector": "Moda",
+    "servicios": ["Estilismo","Dirección creativa","Post-producción"],
+    "sections": [
+        {
+        "layout": "row",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/windable-02.png",
+            "class": "image-left"
+            },
+            {
+            "type": "image",
+            "src": "/assets/images/windable-01.png",
+            "class": "image-right"
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/windable-03.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/windable-04.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        }
+    ],
+    "credits": "Fotografía Ionela Bona [@linboni] · Asistente de estilismo María Coppola [@mc._______] · Talent Lydia Abadía [@_lydiabadia"
+    }

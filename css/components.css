@@ -701,6 +701,7 @@ a.project-item {
 
   .section-row {
     flex-direction: column;
+    gap: 32px;
   }
 
   .image-left, .image-right {

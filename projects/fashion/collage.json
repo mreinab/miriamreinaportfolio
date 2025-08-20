@@ -1,12 +1,12 @@
 {
-  "year": "2024",
-  "title": "COLLAGE",
+  "year": "2025",
+  "title": "COLECCIÓN DE COLLAGES",
   "coverImage": "/assets/images/collage-bg.gif",
-  "description": "Campaña de moda conceptual desarrollada para Juan Vidal.",
-  "cliente": "Juan Vidal",
-  "tipologia": "Dirección creativa",
-  "sector": "Moda",
-  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "description": "El collage forma parte de mi proceso como creativa, pero sobre todo como estilista, y ha terminado por convertirse en una extensión de mi lenguaje visual. Esta colección reúne collages digitales y escaneos en distintos formatos, concebidos como un espacio de experimentación con texturas, combinaciones de color y narrativas, funcionando como etapa previa a tener las prendas en persona.",
+  "cliente": "-",
+  "tipologia": "Dirección de arte",
+  "sector": "Creatividad",
+  "servicios": ["Dirección de arte", "Estilismo", "Post-producción"],
   "sections": [
     {
       "layout": "row",
@@ -23,7 +23,7 @@
         }
       ]
     },
-          {
+      {
       "layout": "column",
       "elements": [
         {
@@ -67,37 +67,7 @@
         }
       ]
     },
-            {
-      "layout": "row",
-      "elements": [
-        {
-          "type": "image",
-          "src": "/assets/images/collage-10.png",
-          "class": "image-left"
-        },
-        {
-          "type": "image",
-          "src": "/assets/images/collage-11.jpg",
-          "class": "image-right"
-        }
-      ]
-    },
-            {
-      "layout": "row",
-      "elements": [
-        {
-          "type": "image",
-          "src": "/assets/images/collage-12.jpg",
-          "class": "image-left"
-        },
-        {
-          "type": "image",
-          "src": "/assets/images/collage-13.jpg",
-          "class": "image-right"
-        }
-      ]
-    },
-              {
+    {
       "layout": "column",
       "elements": [
         {
@@ -107,6 +77,64 @@
           "full": true
         }
       ]
-    }    
+    },
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-06.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-15.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-17.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      },
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-15.jpg",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-16.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-18.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      }
   ]
 }
