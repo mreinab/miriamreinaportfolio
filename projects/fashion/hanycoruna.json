@@ -7,12 +7,23 @@
     "sector": "Moda",
     "servicios": ["Estilismo","Dirección creativa","Post-producción"],
     "sections": [
-        {
+                        {
         "layout": "column",
         "elements": [
             {
             "type": "image",
             "src": "/assets/images/hanycoruna-02.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna.jpg",
             "class": "image-full",
             "full": true
             }

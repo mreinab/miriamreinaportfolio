@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "collage",
-      img: "/assets/images/collage.png",
+      img: "/assets/images/collage-mobile.png",
       type: "fashion",
       slug: "collage",
       title: "COLECCIÓN DE COLLAGES",
@@ -359,7 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "/assets/images/hanycoruna.gif",
       type: "fashion",
       slug: "hanycoruna",
-      title: "Look 4",
+      title: "BTS - Hanny Pineiro",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["Color", "Juventud", "Experimental"],
       top: "0%",
