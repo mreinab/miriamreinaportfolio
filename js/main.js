@@ -296,16 +296,15 @@ document.addEventListener("DOMContentLoaded", () => {
   //MODA
   const projects = [
     {
-      id: "issue 1",
-      img: "/assets/images/readytoconsume-00-icon.jpg",
+      id: "hanyucoruna",
+      img: "/assets/images/hanycoruna.gif",
       type: "fashion",
-      slug: "readytoconsume",
-      title: "PRINTED EDITORIAL · READY-TO-CONSUME",
-      description:
-        "Editorial publicado en una revista indie que da visibilidad a graduados en diseño de moda...",
-      tags: ["estilismo", "dirección"],
-      top: "4%",
-      left: "5%",
+      slug: "hanycoruna",
+      title: "BTS - Hanny Pineiro",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["Color", "Juventud", "Experimental"],
+      top: "5.5%",
+      left: "6%",
     },
     {
       id: "juanvidal",
@@ -316,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "Campaña de lanzamiento de la primera colección de vestidos de novia de Juan Vidal, firma madrileña reconocida…",
       tags: ["dirección de arte", "dirección creativa"],
-      top: "4%",
+      top: "5%",
       left: "40%",
     },
     {
@@ -328,8 +327,31 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         " Fotos de book/test realizadas en estudio por el fotógrafo valenciano Pablo Puche para la modelo...",
       tags: ["estilismo", "model test"],
-      top: "4%",
-      left: "75%",
+      top: "5%",
+      left: "73%",
+    },
+    {
+      id: "windable",
+      img: "/assets/images/windable-icon-00.png",
+      type: "fashion",
+      slug: "windable",
+      title: "COLECCIÓN WINDABLE",
+      description: "  ",
+      tags: ["Estilismo", "Post-producción"],
+      top: "20%",
+      left: "6%",
+    },
+    {
+      id: "readytoconsume",
+      img: "/assets/images/readytoconsume-00-icon.jpg",
+      type: "fashion",
+      slug: "readytoconsume",
+      title: "PRINTED EDITORIAL · READY-TO-CONSUME",
+      description:
+        "Editorial publicado en una revista indie que da visibilidad a graduados en diseño de moda...",
+      tags: ["estilismo", "dirección"],
+      top: "20%",
+      left: "40%",
     },
     {
       id: "collage",
@@ -340,42 +362,20 @@ document.addEventListener("DOMContentLoaded", () => {
       description:
         "El collage forma parte de mi proceso como creativa, pero sobre todo como estilista, y ha termina...",
       tags: ["mixed-media", "post-producción"],
-      top: "0%",
-      left: "0%",
-    },
-    {
-      id: "windable",
-      img: "/assets/images/windable-icon-00.png",
-      type: "fashion",
-      slug: "windable",
-      title: "COLECCIÓN WINDABLE",
-      description: "  ",
-      tags: ["Estilismo", "Post-producción"],
-      top: "0%",
-      left: "0%",
-    },
-    {
-      id: "hanyucoruna",
-      img: "/assets/images/hanycoruna.gif",
-      type: "fashion",
-      slug: "hanycoruna",
-      title: "BTS - Hanny Pineiro",
-      description: "Colores vibrantes y energía juvenil.",
-      tags: ["Color", "Juventud", "Experimental"],
-      top: "0%",
-      left: "0%",
+      top: "21.5%",
+      left: "71%",
     },
     {
       id: "circle1",
       img: "/assets/images/circle-yellow.png",
-      top: "0%",
-      left: "0%",
+      top: "75vh",
+      left: "46%",
     },
     {
       id: "circle2",
       img: "/assets/images/circle-yellow.png",
-      top: "0%",
-      left: "0%",
+      top: "50vh",
+      left: "76%",
     },
   ];
 
