@@ -382,15 +382,37 @@ document.addEventListener("DOMContentLoaded", () => {
   //GRAFICO
   const graphicProjects = [
     {
-      id: "pablopuche-graphic",
-      img: "/assets/images/pablopuche-anne.png",
+      id: "080barcelonafashionweek",
+      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.png",
       type: "graphic",
-      slug: "mymagazine",
-      title: "TEST FOR ANNE · AMODELS",
+      slug: "080fbarcelonafashionweek",
+      title: "080 BARCELONA FASHION WEEK",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["study case", "model test"],
+      top: "5%",
+      left: "25%",
+    },
+    {
+      id: "pablopuche-graphic",
+      img: "/assets/images/graphic.png",
+      type: "graphic",
+      slug: "080fbarcelonafashionweek",
+      title: "LETTERING",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["styling", "model test"],
+      top: "0%",
+      left: "5%",
+    },
+    {
+      id: "thinmagazine",
+      img: "/assets/images/portada4.png",
+      type: "graphic",
+      slug: "thinmagazine",
+      title: "LETTERING",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
       top: "5%",
-      left: "25%",
+      left: "2%",
     },
   ];
 

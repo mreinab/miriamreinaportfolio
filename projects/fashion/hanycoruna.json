@@ -7,7 +7,18 @@
     "sector": "Moda",
     "servicios": ["Estilismo","Dirección creativa","Post-producción"],
     "sections": [
-                        {
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna-05.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
         "layout": "column",
         "elements": [
             {
@@ -24,6 +35,39 @@
             {
             "type": "image",
             "src": "/assets/images/hanycoruna.jpg",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna-03.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna-04.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna-bts1.png",
             "class": "image-full",
             "full": true
             }

@@ -79,6 +79,21 @@
           "class": "image-right"
         }
       ]
+    },
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/readytoconsume-bts1.png",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/readytoconsume-bts2.png",
+          "class": "image-right"
+        }
+      ]
     }
   ],
   "credits": "Fotógrafia Alicia Pastor [@aliciapastorva] · Estilismo + dirección creativa Miriam Reina [@mimilovesdots] · Ayudante de estilismo Ionela Bona [@linboni] · Talent Mariya Muntyan [@meerm_] · Talent Clara Guiñón [@clara.guinon] · MUA Clara Monroe [@monrue.clara] · Hair Yumi García [@muabyyumigarcia] "
