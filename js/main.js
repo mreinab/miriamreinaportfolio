@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const graphicProjects = [
     {
       id: "080barcelonafashionweek",
-      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.png",
+      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg ",
       type: "graphic",
       slug: "barcelonafashionweek",
       title: "080 BARCELONA FASHION WEEK",
