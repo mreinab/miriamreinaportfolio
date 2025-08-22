@@ -135,19 +135,33 @@ function renderSections(sections, title) {
         ) {
           const video = document.createElement("video");
           video.src = element.src;
-          video.alt = element.alt || title;
-          video.autoplay = true; // reproducción automática
-          video.loop = true; // bucle infinito
-          video.muted = true; // necesario para autoplay sin interacción
-          video.controls = false; // sin controles, no se vea como un vídeo
-          video.playsInline = true; // importante para mobile
+
+          // Atributos clave para iOS / Safari
+          video.setAttribute("autoplay", "");
+          video.setAttribute("loop", "");
+          video.setAttribute("muted", "");
+          video.setAttribute("playsinline", "");
+          video.setAttribute("webkit-playsinline", ""); // soporte Safari antiguo
+
+          video.controls = false; // sin controles visibles
 
           if (element.full) video.style.width = "100%";
           video.style.display = "block"; // para que no quede inline raro
-          video.style.objectFit = "cover"; // opcional, que ocupe todo el contenedor
-          video.style.pointerEvents = "none"; // opcional, no interferir con hover/click
+          video.style.objectFit = "cover"; // ocupa todo el contenedor
+          video.style.pointerEvents = "none"; // no interferir con clics/hover
 
           block.appendChild(video);
+
+          // 🔹 Fix adicional para iOS que bloquea autoplay
+          video.play().catch(() => {
+            document.addEventListener(
+              "touchstart",
+              () => {
+                video.play();
+              },
+              { once: true }
+            );
+          });
         } else if (element.type === "image") {
           const img = document.createElement("img");
           img.src = element.src;
