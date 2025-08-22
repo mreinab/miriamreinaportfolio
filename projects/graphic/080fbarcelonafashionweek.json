@@ -34,7 +34,7 @@
       "layout": "column",
       "elements": [
         {
-          "type": "image",
+          "type": "video",
           "src": "/assets/images/graphicdesign-080barcelonafashionweek.mp4",
           "class": "image-full",
           "full": true
@@ -45,7 +45,7 @@
       "layout": "column",
       "elements": [
         {
-          "type": "image",
+          "type": "video",
           "src": "/assets/images/graphicdesign-080barcelonafashionweek-web.mp4",
           "class": "image-full",
           "full": true
