@@ -135,33 +135,19 @@ function renderSections(sections, title) {
         ) {
           const video = document.createElement("video");
           video.src = element.src;
+          video.alt = element.alt || title;
 
-          // Atributos clave para iOS / Safari
-          video.setAttribute("autoplay", "");
-          video.setAttribute("loop", "");
-          video.setAttribute("muted", "");
-          video.setAttribute("playsinline", "");
-          video.setAttribute("webkit-playsinline", ""); // soporte Safari antiguo
+          // Reproducción automática tipo GIF
+          video.autoplay = true; // reproducir automáticamente
+          video.loop = true; // repetir infinitamente
+          video.muted = true; // obligatorio para autoplay
+          video.playsInline = true; // evitar pantalla completa en móviles
+          video.controls = false; // ocultar controles
 
-          video.controls = false; // sin controles visibles
-
+          if (element.class) video.className = element.class;
           if (element.full) video.style.width = "100%";
-          video.style.display = "block"; // para que no quede inline raro
-          video.style.objectFit = "cover"; // ocupa todo el contenedor
-          video.style.pointerEvents = "none"; // no interferir con clics/hover
 
           block.appendChild(video);
-
-          // 🔹 Fix adicional para iOS que bloquea autoplay
-          video.play().catch(() => {
-            document.addEventListener(
-              "touchstart",
-              () => {
-                video.play();
-              },
-              { once: true }
-            );
-          });
         } else if (element.type === "image") {
           const img = document.createElement("img");
           img.src = element.src;
