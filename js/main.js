@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slug: "080fbarcelonafashionweek",
       title: "080 BARCELONA FASHION WEEK",
       description: "Colores vibrantes y energía juvenil.",
-      tags: ["study case", "model test"],
+      tags: ["", "model test"],
       top: "5%",
       left: "25%",
     },

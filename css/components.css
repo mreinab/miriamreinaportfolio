@@ -639,6 +639,14 @@ span#credits {
   object-fit: cover; /* opcional: ajusta el contenido si necesitas */
 }
 
+.video-full {
+  width: 100%;
+  max-height: 80vh;
+  display: block;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
 .text-right-title {
   font-family: Arial, Helvetica, sans-serif;
   font-size: var(--font-size-l);

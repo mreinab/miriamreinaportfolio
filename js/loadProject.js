@@ -129,10 +129,31 @@ function renderSections(sections, title) {
         if (element.class) block.classList.add(element.class);
         if (element.full) block.classList.add("full");
 
-        if (element.type === "image") {
+        if (
+          element.type === "video" ||
+          (element.type === "image" && element.src?.endsWith(".mp4"))
+        ) {
+          const video = document.createElement("video");
+          video.src = element.src;
+          video.alt = element.alt || title;
+          video.autoplay = true; // reproducción automática
+          video.loop = true; // bucle infinito
+          video.muted = true; // necesario para autoplay sin interacción
+          video.controls = false; // sin controles, no se vea como un vídeo
+          video.playsInline = true; // importante para mobile
+
+          if (element.full) video.style.width = "100%";
+          video.style.display = "block"; // para que no quede inline raro
+          video.style.objectFit = "cover"; // opcional, que ocupe todo el contenedor
+          video.style.pointerEvents = "none"; // opcional, no interferir con hover/click
+
+          block.appendChild(video);
+        } else if (element.type === "image") {
           const img = document.createElement("img");
           img.src = element.src;
           img.alt = element.alt || title;
+          if (element.class) img.className = element.class;
+          if (element.full) img.style.width = "100%";
           block.appendChild(img);
         } else if (element.type === "text") {
           const p = document.createElement("p");
