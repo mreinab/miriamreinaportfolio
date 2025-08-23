@@ -41,17 +41,6 @@
         }
       ]
     },
-            {
-      "layout": "column",
-      "elements": [
-        {
-          "type": "video",
-          "src": "/assets/images/graphicdesign-080barcelonafashionweek-web.mp4",
-          "class": "image-full",
-          "full": true
-        }
-      ]
-    },
         {
       "layout": "column",
       "elements": [
