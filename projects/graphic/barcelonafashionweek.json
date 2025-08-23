@@ -51,6 +51,17 @@
           "full": true
         }
       ]
+    },
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/graphicdesign-080barcelonafashionweek-web.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
     },    
     {
       "layout": "column",

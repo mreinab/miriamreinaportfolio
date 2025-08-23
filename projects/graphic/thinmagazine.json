@@ -8,23 +8,23 @@
   "sector": "Moda",
   "servicios": ["Dirección de arte", "Estilismo", "Casting"],
   "sections": [
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/graphicdesign-thinmagazine-logo.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
     {
       "layout": "column",
       "elements": [
         {
           "type": "image",
           "src": "/assets/images/graphicdesign-thinmagazine-comp1.gif",
-          "class": "image-full",
-          "full": true
-        }
-      ]
-    },
-        {
-      "layout": "column",
-      "elements": [
-        {
-          "type": "image",
-          "src": "/assets/images/graphicdesign-thinmagazine-comp3.jpg",
           "class": "image-full",
           "full": true
         }
