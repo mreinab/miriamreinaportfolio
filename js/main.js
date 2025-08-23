@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "thinmagazine",
-      img: "/assets/images/portada4.png",
+      img: "/assets/images/graphicdesign-thin-002.png",
       type: "graphic",
       slug: "thinmagazine",
       title: "LETTERING",

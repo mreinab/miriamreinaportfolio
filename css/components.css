@@ -556,7 +556,6 @@ span#credits {
 #dynamic-content {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
 }
 
 .section-row {
@@ -573,7 +572,6 @@ span#credits {
 .section-column {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
   overflow: hidden;
 }
 
@@ -630,6 +628,7 @@ span#credits {
 
 .image-full {
   width: 100%;
+  margin-bottom: -6px;
 }
 
 .image-full img {
