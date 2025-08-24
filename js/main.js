@@ -421,9 +421,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const webProjects = [
     {
       id: "pablopuche-web",
-      img: "/assets/images/pablopuche-anne.png",
+      img: "/assets/images/web-thin-icon.png",
       type: "web",
-      slug: "flower",
+      slug: "thinmagazine",
       title: "TEST FOR ANNE · AMODELS",
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
