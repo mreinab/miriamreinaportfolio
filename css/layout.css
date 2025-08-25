@@ -544,7 +544,7 @@ footer.footer-index {
   height: 6vh;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: row;
   text-align: center;
   font-size: 0.8rem;
@@ -619,5 +619,13 @@ body.dark-mode .theme-toggle__dark-side {
         display: none;
     }
 
+  .footer.footer-index {
+    height: 5vh;
+    align-items: center;
+  }
+
+  .footer-language {
+    height: fit-content;
+  }
 }
 

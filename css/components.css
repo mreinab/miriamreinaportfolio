@@ -243,15 +243,6 @@ justify-content: flex-start;
     display: none;
   }
 
-  .footer.footer-index {
-    height: 5vh;
-    align-items: center;
-  }
-
-  .footer-language {
-    height: fit-content;
-  }
-
 }
 
 /* FLOWER LOGO */
@@ -988,6 +979,7 @@ button.theme-toggle {
     align-items: center;
     gap: 32px;
   }
+  
   .footer-top, .footer-bottom {
     width: 100%;
     flex-direction: column;
