@@ -129,6 +129,7 @@ body.white-header .breadcrumb-current,
 body.white-header .breadcrumb-separator {
   color: white;
   opacity: 0.8;
+  mix-blend-mode: difference;
 }
 
 body.white-header header.header {

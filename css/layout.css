@@ -215,7 +215,7 @@ svg {
 nav.selector {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 8px;
     align-items: flex-end;
 }
 
@@ -272,22 +272,13 @@ nav.selector a:hover {
 
 .breadcrumb-current {
     font-family: var(--font-logo);
-    font-size: var(--font-size-l);
-    -webkit-text-stroke-width: .5px;
+    font-size: var(--font-size-base);
     letter-spacing: 0.5px;
     text-align: end;
     text-decoration: underline;
     color: var(--color-text);
-    opacity: 0;
-    transform: translateY(-5px);
-    animation: fadeSlideIn 0.5s forwards;
-}
-
-@keyframes fadeSlideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    opacity: 1; /* poner directamente visible */
+    transform: none; /* quitar transform */
 }
 
 .breadcrumb-separator {

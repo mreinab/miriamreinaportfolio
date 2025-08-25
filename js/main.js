@@ -1,6 +1,11 @@
-// Cargar header.html dinámicamente
+// Cargar header.html dinámicamente o headerabout.html
 function loadHeader() {
-  fetch("/components/header.html")
+  const headerFile =
+    window.location.pathname === "/about.html"
+      ? "/components/headerabout.html"
+      : "/components/header.html";
+
+  fetch(headerFile)
     .then((res) => res.text())
     .then((html) => {
       // Insertar el HTML del header
@@ -26,28 +31,34 @@ function loadHeader() {
         }
       }
 
-      // Asegurarse de que el DOM está listo antes de buscar el logo
       requestAnimationFrame(() => {
         updateLogoBasedOnTheme();
       });
 
-      // Escuchar clics en el botón de cambio de tema para actualizar el logo al vuelo
       document.addEventListener("click", (e) => {
         const toggle = e.target.closest(".theme-toggle");
         if (toggle) {
           setTimeout(() => {
             updateLogoBasedOnTheme();
-          }, 50); // Esperar a que se aplique la clase 'dark-mode'
+          }, 50);
         }
       });
 
-      // Iniciar funcionalidades del header
-      initMenuToggle();
-      initThemeToggle();
+      // Funciones del header
       initActiveLinkHighlight();
       initBreadcrumbs();
 
-      // Mostrar el contenido principal con animación
+      // Añadir clase project a spans según página
+      document.querySelectorAll(".nav-span").forEach((span) => {
+        const path = window.location.pathname;
+        if (path.startsWith("/projects/") || path === "/about.html") {
+          span.classList.add("project");
+        } else {
+          span.classList.remove("project");
+        }
+      });
+
+      // Mostrar el contenido principal
       const main = document.getElementById("main-content");
       if (main) {
         main.style.display = "block";
@@ -82,34 +93,39 @@ function initBreadcrumbs() {
   const breadcrumbContainer = document.getElementById("breadcrumb-container");
   if (!breadcrumbContainer) return;
 
-  const path = window.location.pathname; // Ejemplo: "/projects/singleproject.html"
-  const search = window.location.search; // Ejemplo: "?slug=juan-vidal"
+  const path = window.location.pathname;
+  const search = window.location.search;
 
   let crumbs = [];
 
   if (path === "/" || path === "/index.html") {
-    crumbs = [""];
-  } else if (path === "fashion.html") {
-    crumbs = ["", "moda"];
-  } else if (path === "graphic.html") {
-    crumbs = ["", "gráfico"];
-  } else if (
-    path === "/projects/singleproject.html" &&
-    search.startsWith("?slug=")
-  ) {
+    crumbs = []; // ya tienes "proyectos" en HTML
+  } else if (path === "/fashion.html") {
+    crumbs = ["moda"];
+  } else if (path === "/graphic.html") {
+    crumbs = ["gráfico"];
+  } else if (path === "/web.html") {
+    crumbs = ["web dev"];
+  } else if (path === "/projects/singleproject.html") {
     const params = new URLSearchParams(search);
+    const type = params.get("type");
     const slug = params.get("slug") || "";
-    crumbs = ["", "moda", slug.replace(/-/g, " ")];
+
+    let categoryName = "";
+    if (type === "fashion") categoryName = "moda";
+    else if (type === "graphic") categoryName = "gráfico";
+    else if (type === "web") categoryName = "web dev";
+
+    crumbs = [categoryName, slug.replace(/-/g, " ")];
   } else {
-    // Si no reconocemos la ruta, ocultamos el breadcrumb
     breadcrumbContainer.style.display = "none";
     return;
   }
 
   const urlMap = {
-    proyectos: "index.html",
-    moda: "fashion.html",
-    gráfico: "graphic.html",
+    moda: "/fashion.html",
+    gráfico: "/graphic.html",
+    "web dev": "/web.html",
   };
 
   let html = `<nav aria-label="breadcrumb" class="breadcrumb">`;
@@ -120,7 +136,7 @@ function initBreadcrumbs() {
       html += `<a href="${
         urlMap[crumb] || "#"
       }" class="breadcrumb-link">${crumb}</a>`;
-      html += `<span class="breadcrumb-separator">&gt;</span>`;
+      html += `<span class="breadcrumb-separator">+</span>`;
     } else {
       html += `<span class="breadcrumb-current">${crumb}</span>`;
     }
@@ -129,34 +145,7 @@ function initBreadcrumbs() {
   html += `</nav>`;
 
   breadcrumbContainer.innerHTML = html;
-  breadcrumbContainer.style.display = "block";
-
-  const breadcrumbNav = breadcrumbContainer.querySelector(".breadcrumb");
-  if (breadcrumbNav) {
-    void breadcrumbNav.offsetWidth;
-    breadcrumbNav.classList.add("show");
-  }
-}
-
-// DARK MODE
-function initThemeToggle() {
-  const themeToggles = document.querySelectorAll(".theme-toggle");
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-  }
-
-  themeToggles.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const isDark = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-  });
-
-  if (themeToggles.length === 0) {
-    console.warn("No se encontró ningún botón .theme-toggle");
-  }
+  breadcrumbContainer.style.display = "inline"; // no block, para que encaje con tu [ ]
 }
 
 // Resaltar link activo
