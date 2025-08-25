@@ -209,7 +209,7 @@ justify-content: flex-start;
   .logo-mobile { display: block; }
 
   .container-index {
-    height: 43dvh;
+    height: 48dvh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
