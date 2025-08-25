@@ -29,20 +29,33 @@
   --color-accent: #FFFF6F;
   --color-border: rgba(0, 0, 0, 0.15);
   --color-text-lighter: rgba(0, 0, 0, 0.75);
+  --color-text-midlighter: rgba(0, 0, 0, 0.45);
 
   /* ✍️ TIPOGRAFÍA */
-  --font-logo: 'PP-NeueBit', 'Inter', sans-serif;
-  --font-header: 'PP-Air', 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-logo: Helvetica, Arial, sans-serif;
+  --font-header: Helvetica, Arial, sans-serif;
+  --font-body: Helvetica, Arial, sans-serif;
+  --font-size-xxs: 0.65rem;   /* 10px */
   --font-size-xs: 0.75rem;   /* 12px */
   --font-size-s: 0.875rem;   /* 14px */
   --font-size-base: 1rem;    /* 16px */
   --font-size-m: 1.25rem;    /* 20px */
-  --font-size-l: 1.75rem;     /* 24px */
+  --font-size-l: 1.5rem;     /* 24px */
   --font-size-xl: 2rem;      /* 32px */
-  --font-size-2xl: 3rem;      /* 40px */
-  --font-size-3xl: 5rem;      /* 40px */
-  --font-size-xxl: 9rem;     /* 48px */
+  --font-size-2xl: 2.5rem;   /* 40px */
+  --font-size-3xl: 3rem;     /* 48px */
+  --font-size-xxl: 4rem;     /* 64px */
+
+  /* ✍️ PESOS FUENTE */
+  --font-weight-thin: 100;      /* Muy fino (poco usado en UI) */
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;     /* Textos secundarios / notas */
+  --font-weight-regular: 400;   /* Texto base */
+  --font-weight-medium: 500;    /* Botones, etiquetas */
+  --font-weight-semi-bold: 600; /* Subtítulos, headers medios */
+  --font-weight-bold: 700;      /* Titulares principales */
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;     /* Muy pesado (casi nunca en UI) */
 
   /* 📐 SPACING (ESPACIOS) */
   --space-xxs: 4px;
