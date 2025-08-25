@@ -468,36 +468,6 @@ nav.selector a:hover {
   color: var(--color-text);
 }
 
-.mobile-nav a.mobile-nav-active {
-  position: relative;
-  text-decoration: underline;
-}
-
-.mobile-nav a.mobile-nav-active::before {
-  content: "[";
-  margin-right: 4px;
-}
-
-.mobile-nav a.mobile-nav-active::after {
-  content: "]";
-  margin-left: 4px;
-}
-
-.mobile-nav a.mobile-nav-active {
-  position: relative;
-  text-decoration: underline;
-}
-
-.mobile-nav a.mobile-nav-active::before {
-  content: "[";
-  margin-right: 4px;
-}
-
-.mobile-nav a.mobile-nav-active::after {
-  content: "]";
-  margin-left: 4px;
-}
-
 /* ----------------------------------- */
 /* ABOUT */
 /* ----------------------------------- */
