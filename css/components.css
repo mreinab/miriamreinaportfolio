@@ -194,47 +194,48 @@ justify-content: flex-start;
 
 @media (max-width: 768px) {
   .logo-index {
-    height: 80%;
-    margin-bottom: 60px;
+    height: 20vh;
+    padding: 24px 8px;
   }
   
 
-  #logo-img-index {
-    height: 24vh;
-    padding: 40px 0 0;   /* opcional, ajustar padding proporcional */
+  .container-index {
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
   }
 
-  /* Ocultar los p dentro de los contenedores */
   .container-index-p p {
     display: none;
   }
 
-  /* Ajuste opcional del contenedor principal */
-  .container-index {
-    height: 100%;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 0px;
-    margin-bottom: 70px;
-  }
 
   .img-index-container {
     width: 50%;
     height: auto;
   }
 
-  .nav-index a {
-    font-size: var(--font-size-2xl);
-    line-height: var(--font-size-base);
+  .nav-index {
+    height: 25vh;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-index a {
-    line-height: var(--font-size-l);
+    font-size: var(--font-size-s);
+    line-height: var(--font-size-base);
   }
-  .nav-index {
-    height: 100%;
-    margin-bottom: 40px;
+
+  .nav-span {
+    display: none;
   }
+
+  .footer.footer-index {
+    height: 5vh;
+  }
+
 }
 
 /* FLOWER LOGO */
@@ -1011,11 +1012,6 @@ button.theme-toggle {
     gap: 24px;
   }
 
-  .footer-language {
-    margin-top: 12px;
-    width: 100%;
-    justify-content: flex-end;
-  }
 
   .logo-footer-container {
   display: flex;

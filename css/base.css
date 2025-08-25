@@ -29,13 +29,13 @@
   --color-accent: #FFFF6F;
   --color-border: rgba(0, 0, 0, 0.15);
   --color-text-lighter: rgba(0, 0, 0, 0.75);
-  --color-text-midlighter: rgba(0, 0, 0, 0.45);
+  --color-text-midlighter: rgba(0, 0, 0, 0.35);
 
   /* ✍️ TIPOGRAFÍA */
   --font-logo: Helvetica, Arial, sans-serif;
   --font-header: Helvetica, Arial, sans-serif;
   --font-body: Helvetica, Arial, sans-serif;
-  --font-size-xxs: 0.65rem;   /* 10px */
+  --font-size-xxs: 0.55rem;   /* 10px */
   --font-size-xs: 0.75rem;   /* 12px */
   --font-size-s: 0.875rem;   /* 14px */
   --font-size-base: 1rem;    /* 16px */
