@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //WEB
   const webProjects = [
     {
-      id: "pablopuche-web",
+      id: "thinmagazine",
       img: "/assets/images/web-thin-icon.png",
       type: "web",
       slug: "thinmagazine",
@@ -428,6 +428,28 @@ document.addEventListener("DOMContentLoaded", () => {
       description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
       top: "5%",
+      left: "25%",
+    },
+    {
+      id: "miriamreina",
+      img: "/assets/images/web-miriam-icon.png",
+      type: "web",
+      slug: "miriamreina",
+      title: "TEST FOR ANNE · AMODELS",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["styling", "model test"],
+      top: "15%",
+      left: "25%",
+    },
+    {
+      id: "thefolder",
+      img: "/assets/images/web-miriam-icon2.png",
+      type: "web",
+      slug: "miriamreina",
+      title: "TEST FOR ANNE · AMODELS",
+      description: "Colores vibrantes y energía juvenil.",
+      tags: ["styling", "model test"],
+      top: "15%",
       left: "25%",
     },
   ];
