@@ -201,43 +201,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const content = {
     moda: {
-      img: "/assets/images/collage-mobile.png",
+      img: "/assets/images/project-2.jpg",
       left: ["", "", "estilismo"],
       right: ["dirección creativa", "", ""],
     },
     gráfico: {
-      img: "/assets/images/graphic.png",
+      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg",
       left: ["", "lettering", "diseño editorial"],
       right: ["branding", "diseño visual", ""],
     },
     web: {
-      img: "/assets/images/web.png",
-      left: ["UX/UI", "desarrollo", "prototipado"],
-      right: ["frontend", "responsive", "accesible"],
+      img: "/assets/images/web12.png",
+      left: ["UI Design", "Frontend", "Prototyping"],
+      right: ["UX", "Responsive", "Webflow"],
     },
   };
 
   function fadeTexts(textElements, newTexts) {
-    // fade out
     textElements.forEach((p) => p.classList.add("text-fade-out"));
 
     setTimeout(() => {
-      // cambiar texto
       textElements.forEach((p, i) => {
         p.textContent = newTexts[i] || "";
         p.classList.remove("text-fade-out");
         p.classList.add("text-fade-in");
       });
 
-      // quitar fade-in después para permitir repetir animación
       setTimeout(() => {
         textElements.forEach((p) => p.classList.remove("text-fade-in"));
-      }, 2); // duración de la transición
-    }, 2); // coincide con la duración de fade-out
+      }, 100); // duración de la transición
+    }, 100); // coincide con fade-out
   }
 
   function fadeChange(newImg, left, right) {
-    // Imagen
     img.classList.add("fade-out");
     setTimeout(() => {
       img.src = newImg;
@@ -246,14 +242,13 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => img.classList.remove("fade-in"), 250);
     }, 250);
 
-    // Textos
     fadeTexts(leftTexts, left);
     fadeTexts(rightTexts, right);
   }
 
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
-      const key = link.textContent.trim().toLowerCase();
+      const key = link.dataset.section; // "moda", "gráfico", "web"
       if (content[key]) {
         fadeChange(content[key].img, content[key].left, content[key].right);
       }
