@@ -215,7 +215,7 @@ svg {
 nav.selector {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 5vw;
     align-items: flex-end;
 }
 

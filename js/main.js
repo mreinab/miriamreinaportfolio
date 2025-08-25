@@ -45,6 +45,7 @@ function loadHeader() {
       });
 
       // Funciones del header
+      initMenuToggle();
       initActiveLinkHighlight();
       initBreadcrumbs();
 
@@ -446,12 +447,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Crear grid
     const grid = document.createElement("div");
-    grid.className = "projects-grid"; // lo estilamos en CSS
+    grid.className = "projects-grid"; // estilamos en CSS
     targetContainer.appendChild(grid);
 
     projectList.forEach((project) => {
       const item = document.createElement("div");
       item.className = "project-grid-item";
+      item.style.cursor = "pointer"; // Indica que es clickeable
 
       const img = document.createElement("img");
       img.src = project.img;
@@ -472,7 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hover: mostrar solo esta imagen y su texto
       item.addEventListener("mouseenter", () => {
         Array.from(grid.children).forEach((child) => {
-          if (child !== item) child.style.opacity = "0"; // desaparecen
+          if (child !== item) child.style.opacity = "0"; // desaparecen otras
         });
         textOverlay.style.opacity = "1"; // mostrar columnas
       });
@@ -500,6 +502,12 @@ document.addEventListener("DOMContentLoaded", () => {
       item.addEventListener("mouseleave", () =>
         tooltip.classList.remove("show")
       );
+
+      // CLICK: ir al proyecto correspondiente
+      item.addEventListener("click", () => {
+        if (!project.slug || !project.type) return;
+        window.location.href = `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`;
+      });
 
       grid.appendChild(item);
     });
