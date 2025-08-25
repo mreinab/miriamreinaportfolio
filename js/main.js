@@ -340,18 +340,6 @@ document.addEventListener("DOMContentLoaded", () => {
       top: "21.5%",
       left: "71%",
     },
-    {
-      id: "circle1",
-      img: "/assets/images/circle-yellow.png",
-      top: "75vh",
-      left: "46%",
-    },
-    {
-      id: "circle2",
-      img: "/assets/images/circle-yellow.png",
-      top: "50vh",
-      left: "76%",
-    },
   ];
 
   //GRAFICO

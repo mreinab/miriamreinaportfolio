@@ -292,8 +292,10 @@ justify-content: flex-start;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(200px, auto); /* altura mínima para las filas */
   grid-auto-flow: dense; /* llena huecos */
-  gap: 16px;
+  gap: 5vw;
   width: 100%;
+
+  padding: 20vh 5%;
 }
 
 @media (max-width: 768px) {
@@ -331,6 +333,7 @@ justify-content: flex-start;
   background: rgba(255,255,255,0.9);
   padding: 0.5rem;
 }
+
 
 /* === CONTAINER BASE === */
 .container {
