@@ -52,7 +52,7 @@
 /* HEADER */
 /* ----------------------------------- */
 .logo img {
-  height: 70px; /* o el alto que desees */
+  height: 50px; /* o el alto que desees */
   width: auto;
   display: block;
 }
@@ -222,9 +222,8 @@ nav.selector {
 nav.selector a {
   text-align: end;
   font-family: var(--font-logo);
-  font-size: var(--font-size-l);
-  letter-spacing: 0.5px;
-  -webkit-text-stroke-width: .5px;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.3px;
   color: inherit;
   cursor: pointer;
   background-color: transparent;
@@ -378,16 +377,15 @@ nav.selector a:hover {
 /* MOBILE MENU (Overlay) */
 /* ----------------------------------- */
 .mobile-menu {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
   display: none;
   position: fixed;
   background-color: var(--color-bg);
-  z-index: 1000;
+  z-index: 900;
   padding: 2rem;
   flex-direction: column;
   justify-content: space-between;
-    z-index: var(--z-overlay);
 }
 
 .mobile-menu-top {
@@ -430,13 +428,15 @@ nav.selector a:hover {
     gap: 1rem;
     text-align: center;
     font-size: 2rem;
+    gap: 5vh;
 }
 
 .mobile-nav a {
   font-family: var(--font-logo);
-  font-size: var(--font-size-2xl);
-  font-weight: bold;
-  letter-spacing: 0.5px;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.3px;
+  -webkit-text-stroke: 0.5px black;
   color: inherit;
   cursor: pointer;
   background-color: transparent;
@@ -468,6 +468,35 @@ nav.selector a:hover {
   color: var(--color-text);
 }
 
+.mobile-nav a.mobile-nav-active {
+  position: relative;
+  text-decoration: underline;
+}
+
+.mobile-nav a.mobile-nav-active::before {
+  content: "[";
+  margin-right: 4px;
+}
+
+.mobile-nav a.mobile-nav-active::after {
+  content: "]";
+  margin-left: 4px;
+}
+
+.mobile-nav a.mobile-nav-active {
+  position: relative;
+  text-decoration: underline;
+}
+
+.mobile-nav a.mobile-nav-active::before {
+  content: "[";
+  margin-right: 4px;
+}
+
+.mobile-nav a.mobile-nav-active::after {
+  content: "]";
+  margin-left: 4px;
+}
 
 /* ----------------------------------- */
 /* ABOUT */
@@ -602,6 +631,7 @@ body.dark-mode .theme-toggle__dark-side {
     background-color: var(--color-bg);
     padding-bottom: 18px;
     align-items: flex-end;
+    z-index: 1000;
     }
     
     header .logo {
