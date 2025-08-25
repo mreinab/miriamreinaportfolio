@@ -197,7 +197,7 @@ justify-content: flex-start;
 
 @media (max-width: 768px) {
   .logo-index {
-    height: 27dvh;
+    height: 27vh;
     padding: 24px 8px;
   }
 
@@ -209,7 +209,7 @@ justify-content: flex-start;
   .logo-mobile { display: block; }
 
   .container-index {
-    height: 48dvh;
+    height: 48vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@ justify-content: flex-start;
   }
 
   .nav-index {
-    height: 20dvh;
+    height: 20vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
