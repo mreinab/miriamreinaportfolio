@@ -285,7 +285,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "hanycoruna",
       title: "BTS - Hanny Pineiro",
-      description: "Colores vibrantes y energía juvenil.",
       tags: ["Color", "Juventud", "Experimental"],
       top: "5.5%",
       left: "6%",
@@ -296,8 +295,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "juan-vidal",
       title: "JUAN VIDAL · CAMPAÑA DE NOVIA",
-      description:
-        "Campaña de lanzamiento de la primera colección de vestidos de novia de Juan Vidal, firma madrileña reconocida…",
       tags: ["dirección de arte", "dirección creativa"],
       top: "5%",
       left: "40%",
@@ -308,8 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "pablopuche",
       title: "TEST PARA ANNA E. · CARMEN DURAN",
-      description:
-        " Fotos de book/test realizadas en estudio por el fotógrafo valenciano Pablo Puche para la modelo...",
       tags: ["estilismo", "model test"],
       top: "5%",
       left: "73%",
@@ -320,7 +315,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "windable",
       title: "COLECCIÓN WINDABLE",
-      description: "  ",
       tags: ["Estilismo", "Post-producción"],
       top: "20%",
       left: "6%",
@@ -331,8 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "readytoconsume",
       title: "PRINTED EDITORIAL · READY-TO-CONSUME",
-      description:
-        "Editorial publicado en una revista indie que da visibilidad a graduados en diseño de moda...",
       tags: ["estilismo", "dirección"],
       top: "20%",
       left: "40%",
@@ -343,8 +335,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "collage",
       title: "COLECCIÓN DE COLLAGES",
-      description:
-        "El collage forma parte de mi proceso como creativa, pero sobre todo como estilista, y ha termina...",
       tags: ["mixed-media", "post-producción"],
       top: "21.5%",
       left: "71%",
@@ -371,8 +361,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "barcelonafashionweek",
       title: "080 BARCELONA FASHION WEEK",
-      description:
-        "El proyecto parte del logotipo actual de la 080 Barcelona Fashion Week y plantea una extensión de...",
       tags: ["brand application", "visual design"],
       top: "5%",
       left: "25%",
@@ -383,7 +371,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "thinmagazine",
       title: "THIN MAGAZINE · DISEÑO EDITORIAL",
-      description: "Colores vibrantes y energía juvenil.",
       tags: ["branding", "editorial design"],
       top: "5%",
       left: "2%",
@@ -394,7 +381,6 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "thelab",
       title: "THE LAB · RECOPILATORY",
-      description: "Colores vibrantes y energía juvenil.",
       tags: ["styling", "model test"],
       top: "0%",
       left: "5%",
@@ -409,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "thinmagazine",
       title: "TEST FOR ANNE · AMODELS",
-      description: "Colores vibrantes y energía juvenil.",
+
       tags: ["styling", "model test"],
       top: "5%",
       left: "25%",
@@ -420,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "miriamreina",
       title: "TEST FOR ANNE · AMODELS",
-      description: "Colores vibrantes y energía juvenil.",
+
       tags: ["styling", "model test"],
       top: "15%",
       left: "25%",
@@ -431,7 +417,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "miriamreina",
       title: "TEST FOR ANNE · AMODELS",
-      description: "Colores vibrantes y energía juvenil.",
+
       tags: ["styling", "model test"],
       top: "15%",
       left: "25%",
@@ -449,161 +435,74 @@ document.addEventListener("DOMContentLoaded", () => {
   const tooltipTags = document.getElementById("tooltip-tags");
   const tooltipCTA = document.getElementById("tooltip-cta");
 
-  const margin = 0;
-  const savedPositions = JSON.parse(
-    localStorage.getItem("projectPositions") || "{}"
-  );
   const isMobile = window.innerWidth <= 768;
-  let mobilePatternCounter = 0;
 
   // --- FUNCION DE RENDERIZADO ---
   function renderProjects(projectList, targetContainer) {
     if (!targetContainer) return;
 
+    // Limpiar contenedor
+    targetContainer.innerHTML = "";
+
+    // Crear grid
+    const grid = document.createElement("div");
+    grid.className = "projects-grid"; // lo estilamos en CSS
+    targetContainer.appendChild(grid);
+
     projectList.forEach((project) => {
-      const a = document.createElement("a");
-      a.href =
-        project.slug && project.type
-          ? `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`
-          : "#";
-      a.className = "project-item";
-      a.style.position = isMobile ? "static" : "absolute";
-      a.style.cursor = isMobile ? "default" : "grab";
-      a.setAttribute("data-id", project.id);
-      a.setAttribute(
-        "data-tags",
-        project.tags ? project.tags.map((t) => t.toLowerCase()).join(",") : ""
-      );
+      const item = document.createElement("div");
+      item.className = "project-grid-item";
 
       const img = document.createElement("img");
       img.src = project.img;
-      img.alt = project.id;
+      img.alt = project.title || project.id;
       img.draggable = false;
 
-      if (!project.slug) {
-        a.classList.add("decorative");
-        img.style.width = "12px";
-        img.style.height = "12px";
-      }
+      item.appendChild(img);
 
-      if (isMobile) {
-        if (mobilePatternCounter % 3 === 2) {
-          a.classList.add("span-full");
-        } else {
-          a.classList.add("span-half");
-        }
-        mobilePatternCounter++;
-      } else {
-        const saved = savedPositions[project.id];
-        if (saved) {
-          a.style.top = saved.top;
-          a.style.left = saved.left;
-        } else {
-          a.style.top = project.top;
-          a.style.left = project.left;
-        }
-      }
+      // Columnas de texto ocultas
+      const textOverlay = document.createElement("div");
+      textOverlay.className = "text-columns";
+      textOverlay.innerHTML = `
+      <div class="text-col">${project.title || ""}</div>
+      <div class="text-col">${project.tags ? project.tags.join(", ") : ""}</div>
+    `;
+      item.appendChild(textOverlay);
 
-      a.appendChild(img);
-      targetContainer.appendChild(a);
-
-      if (project.description && !isMobile) {
-        a.addEventListener("mouseenter", () => {
-          tooltipTitle.textContent = project.title || "";
-          tooltipDescription.textContent = project.description || "";
-          tooltipTags.innerHTML = project.tags
-            ? project.tags
-                .map((tag) => `<span class="tag">${tag}</span>`)
-                .join(" ")
-            : "";
-          tooltipCTA.textContent = project.cta || "";
-          tooltipCTA.href = project.link || "#";
-          tooltip.classList.add("show");
+      // Hover: mostrar solo esta imagen y su texto
+      item.addEventListener("mouseenter", () => {
+        Array.from(grid.children).forEach((child) => {
+          if (child !== item) child.style.opacity = "0"; // desaparecen
         });
-        a.addEventListener("mouseleave", () => {
-          tooltip.classList.remove("show");
+        textOverlay.style.opacity = "1"; // mostrar columnas
+      });
+
+      item.addEventListener("mouseleave", () => {
+        Array.from(grid.children).forEach((child) => {
+          child.style.opacity = "1"; // vuelven
         });
-      }
+        textOverlay.style.opacity = "0"; // ocultar columnas
+      });
 
-      if (!isMobile) enableDrag(a, project.id, targetContainer);
+      // Tooltip
+      item.addEventListener("mouseenter", () => {
+        tooltipTitle.textContent = project.title || "";
+        tooltipDescription.textContent = project.description || "";
+        tooltipTags.innerHTML = project.tags
+          ? project.tags
+              .map((tag) => `<span class="tag">${tag}</span>`)
+              .join(" ")
+          : "";
+        tooltipCTA.textContent = project.cta || "";
+        tooltipCTA.href = project.link || "#";
+        tooltip.classList.add("show");
+      });
+      item.addEventListener("mouseleave", () =>
+        tooltip.classList.remove("show")
+      );
+
+      grid.appendChild(item);
     });
-  }
-
-  // --- FUNCION DE DRAG ---
-  function enableDrag(element, id, containerRef) {
-    let isDragging = false;
-    let offsetX = 0,
-      offsetY = 0;
-    let moved = false;
-
-    element.addEventListener("mousedown", (e) => {
-      if (e.button !== 0) return;
-      const rect = element.getBoundingClientRect();
-      offsetX = e.clientX - rect.left;
-      offsetY = e.clientY - rect.top;
-      isDragging = true;
-      moved = false;
-      element.style.zIndex = 1000;
-      element.style.cursor = "grabbing";
-      e.preventDefault();
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      moved = true;
-      const containerRect = containerRef.getBoundingClientRect();
-      const elementRect = element.getBoundingClientRect();
-      let x = e.clientX - offsetX - containerRect.left;
-      let y = e.clientY - offsetY - containerRect.top;
-      if (x < margin) x = margin;
-      if (y < margin) y = margin;
-      if (x > containerRect.width - elementRect.width - margin)
-        x = containerRect.width - elementRect.width - margin;
-      if (y > containerRef.offsetHeight - elementRect.height - margin)
-        y = containerRef.offsetHeight - elementRect.height - margin;
-      element.style.left = `${x}px`;
-      element.style.top = `${y}px`;
-    });
-
-    document.addEventListener("mouseup", (e) => {
-      if (!isDragging) return;
-      isDragging = false;
-      element.style.cursor = "grab";
-      if (moved) {
-        e.preventDefault();
-        element.addEventListener(
-          "click",
-          function preventClick(clickEvent) {
-            clickEvent.preventDefault();
-            element.removeEventListener("click", preventClick);
-          },
-          { once: true }
-        );
-
-        const containerRect = containerRef.getBoundingClientRect();
-        const elementRect = element.getBoundingClientRect();
-        const leftPercent =
-          ((elementRect.left - containerRect.left) / containerRect.width) * 100;
-        const topPercent =
-          ((elementRect.top - containerRect.top) / containerRect.height) * 100;
-
-        const currentPositions = JSON.parse(
-          localStorage.getItem("projectPositions") || "{}"
-        );
-        currentPositions[id] = {
-          top: `${topPercent.toFixed(2)}%`,
-          left: `${leftPercent.toFixed(2)}%`,
-        };
-        localStorage.setItem(
-          "projectPositions",
-          JSON.stringify(currentPositions)
-        );
-        element.style.top = `${topPercent.toFixed(2)}%`;
-        element.style.left = `${leftPercent.toFixed(2)}%`;
-      }
-    });
-
-    element.addEventListener("dragstart", (e) => e.preventDefault());
   }
 
   // --- RENDERIZADO ---
@@ -632,12 +531,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => console.error(err));
   }
 
+  // --- RENDER DE MÁS PROYECTOS ---
   function renderMoreProjects(allProjects, currentSlug) {
     const container = document.getElementById("more-projects-scroll");
     if (!container) return;
 
     allProjects
-      .filter((project) => project.slug && project.slug !== currentSlug) // <-- solo proyectos con slug
+      .filter((project) => project.slug && project.slug !== currentSlug)
       .forEach((project) => {
         const img = document.createElement("img");
         img.src = project.img;
@@ -651,7 +551,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Ejecutar la función ---
   if (slug) {
-    renderMoreProjects(projects, slug); // si quieres solo moda
+    renderMoreProjects(projects, slug);
     // si quieres todos los tipos:
     // renderMoreProjects([...projects, ...graphicProjects, ...webProjects], slug);
   }
