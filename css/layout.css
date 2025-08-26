@@ -214,15 +214,15 @@ svg {
 
 nav.selector {
     display: flex;
-    flex-direction: row;
-    gap: 5vw;
+    flex-direction: column;
+    gap: 1vw;
     align-items: flex-end;
 }
 
 nav.selector a {
   text-align: end;
   font-family: var(--font-logo);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
   letter-spacing: 0.3px;
   color: inherit;
   cursor: pointer;
@@ -272,7 +272,7 @@ nav.selector a:hover {
 
 .breadcrumb-current {
     font-family: var(--font-logo);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-base);
     letter-spacing: 0.5px;
     text-align: end;
     text-decoration: underline;

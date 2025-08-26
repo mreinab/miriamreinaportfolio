@@ -185,7 +185,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightTexts = document.querySelectorAll(".container-index-p.start p");
   const links = document.querySelectorAll(".nav-index a");
 
-  const defaultImg = img.src;
+  const imgEl = document.getElementById("miImagen");
+  if (imgEl) {
+    imgEl.src = "imagen.jpg";
+  }
   const defaultLeft = Array.from(leftTexts).map((p) => p.textContent);
   const defaultRight = Array.from(rightTexts).map((p) => p.textContent);
 
@@ -285,8 +288,8 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "/assets/images/hanycoruna.gif",
       type: "fashion",
       slug: "hanycoruna",
-      title: "BTS - Hanny Pineiro",
-      tags: ["Color", "Juventud", "Experimental"],
+      title: "FITTING FOR HANNY",
+      tags: ["styling", "post-production"],
       top: "5.5%",
       left: "6%",
     },
@@ -295,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "/assets/images/juanvidal-00-icon1.jpg",
       type: "fashion",
       slug: "juan-vidal",
-      title: "JUAN VIDAL · CAMPAÑA DE NOVIA",
+      title: "JUAN VIDAL CAMPAÑA DE NOVIA",
       tags: ["dirección de arte", "dirección creativa"],
       top: "5%",
       left: "40%",
@@ -316,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "fashion",
       slug: "windable",
       title: "COLECCIÓN WINDABLE",
-      tags: ["Estilismo", "Post-producción"],
+      tags: ["estilismo", "post-producción"],
       top: "20%",
       left: "6%",
     },
@@ -433,65 +436,109 @@ document.addEventListener("DOMContentLoaded", () => {
     // Limpiar contenedor
     targetContainer.innerHTML = "";
 
-    // Crear grid
-    const grid = document.createElement("div");
-    grid.className = "projects-grid"; // estilamos en CSS
-    targetContainer.appendChild(grid);
+    // Contenedor principal
+    const wrapper = document.createElement("div");
+    wrapper.style.position = "relative";
+    targetContainer.appendChild(wrapper);
 
-    projectList.forEach((project) => {
+    // Grid
+    const grid = document.createElement("div");
+    grid.className = "projects-grid";
+    wrapper.appendChild(grid);
+
+    // Overlay para los textos
+    const overlay = document.createElement("div");
+    overlay.className = "projects-overlay";
+    overlay.style.position = "absolute";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.pointerEvents = "none"; // que no interfiera con hover
+    wrapper.appendChild(overlay);
+
+    projectList.forEach((project, index) => {
       const item = document.createElement("div");
       item.className = "project-grid-item";
-      item.style.cursor = "pointer"; // Indica que es clickeable
+      item.dataset.index = index;
 
       const img = document.createElement("img");
       img.src = project.img;
       img.alt = project.title || project.id;
       img.draggable = false;
-
       item.appendChild(img);
 
-      // Columnas de texto ocultas
-      const textOverlay = document.createElement("div");
-      textOverlay.className = "text-columns";
-      textOverlay.innerHTML = `
-      <div class="text-col">${project.title || ""}</div>
-      <div class="text-col">${project.tags ? project.tags.join(", ") : ""}</div>
-    `;
-      item.appendChild(textOverlay);
-
-      // Hover: mostrar solo esta imagen y su texto
+      // Hover
       item.addEventListener("mouseenter", () => {
+        // Ocultar otros
         Array.from(grid.children).forEach((child) => {
-          if (child !== item) child.style.opacity = "0"; // desaparecen otras
+          if (child !== item) child.style.opacity = "0";
         });
-        textOverlay.style.opacity = "1"; // mostrar columnas
+
+        // Crear textos dentro del mismo item
+        const titleCol = document.createElement("div");
+        titleCol.className = "text-col column-text-title";
+        titleCol.textContent = project.title;
+
+        const tagsCol = document.createElement("div");
+        tagsCol.className = "text-col column-text-tags";
+        tagsCol.textContent = project.tags ? project.tags.join(" + ") : "";
+
+        // Posición absoluta dentro del item
+        titleCol.style.position = "absolute";
+        tagsCol.style.position = "absolute";
+
+        const col = (index % 3) + 1;
+
+        if (col === 1) {
+          titleCol.style.left = "110%";
+          tagsCol.style.left = "220%";
+        } else if (col === 2) {
+          titleCol.style.left = "-110%";
+          tagsCol.style.left = "110%";
+        } else {
+          titleCol.style.left = "-220%";
+          tagsCol.style.left = "-110%";
+        }
+
+        titleCol.style.top = "0";
+        tagsCol.style.top = "50%";
+        titleCol.style.transform = "translateY(0)";
+        tagsCol.style.transform = "translateY(-50%)";
+
+        item.appendChild(titleCol);
+        item.appendChild(tagsCol);
+
+        item._titleCol = titleCol;
+        item._tagsCol = tagsCol;
       });
 
       item.addEventListener("mouseleave", () => {
-        Array.from(grid.children).forEach((child) => {
-          child.style.opacity = "1"; // vuelven
-        });
-        textOverlay.style.opacity = "0"; // ocultar columnas
+        Array.from(grid.children).forEach(
+          (child) => (child.style.opacity = "1")
+        );
+        if (item._titleCol) {
+          item.removeChild(item._titleCol);
+          item.removeChild(item._tagsCol);
+          item._titleCol = null;
+          item._tagsCol = null;
+        }
       });
 
-      // Tooltip
-      item.addEventListener("mouseenter", () => {
-        tooltipTitle.textContent = project.title || "";
-        tooltipDescription.textContent = project.description || "";
-        tooltipTags.innerHTML = project.tags
-          ? project.tags
-              .map((tag) => `<span class="tag">${tag}</span>`)
-              .join(" ")
-          : "";
-        tooltipCTA.textContent = project.cta || "";
-        tooltipCTA.href = project.link || "#";
-        tooltip.classList.add("show");
-      });
-      item.addEventListener("mouseleave", () =>
-        tooltip.classList.remove("show")
-      );
+      item.addEventListener("mouseleave", () => {
+        Array.from(grid.children).forEach(
+          (child) => (child.style.opacity = "1")
+        );
 
-      // CLICK: ir al proyecto correspondiente
+        if (item._titleCol) {
+          overlay.removeChild(item._titleCol);
+          overlay.removeChild(item._tagsCol);
+          item._titleCol = null;
+          item._tagsCol = null;
+        }
+      });
+
+      // Click
       item.addEventListener("click", () => {
         if (!project.slug || !project.type) return;
         window.location.href = `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`;

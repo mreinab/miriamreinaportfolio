@@ -25,32 +25,6 @@
     }
 
 
-    /*Florwer shape*/
-.flower-shape {
-  overflow: hidden;
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-
-.flower-shape .gif-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.flower-shape .gif-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* rellena sin deformar */
-  display: block;
-}
-
 /* INDEX */
 .pp-air {
   font-family: var(--font-header);
@@ -116,7 +90,7 @@
 
 .container-index-p p {
   margin: 0;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-s);
   color: var(--color-text-midlighter);
 }
 
@@ -172,7 +146,7 @@ justify-content: flex-start;
 .nav-index a {
   font-family: var(--font-header);
   text-decoration: none;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-m);
   color: var(--color-text);
   font-weight: var( --font-weight-medium);
   -webkit-text-stroke: .15px black;
@@ -189,7 +163,7 @@ justify-content: flex-start;
 
 .nav-span {
   text-decoration: none;
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
   color: var(--color-text-midlighter);
 }
 
@@ -250,7 +224,7 @@ justify-content: flex-start;
 }
 
 
-/* FLOWER LOGO */
+/* FLOWER LOGO ON LEFT SIDE */
 .flower-logo {
   width: 25px;
   height: 25px;
@@ -262,7 +236,8 @@ justify-content: flex-start;
   mix-blend-mode: difference;
 }
 
-    /* INSIDE PROJECTS */
+
+  /* INSIDE PROJECTS */
 
     .white-header {
       margin-top: 0px;
@@ -290,12 +265,13 @@ justify-content: flex-start;
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(200px, auto); /* altura mínima para las filas */
-  grid-auto-flow: dense; /* llena huecos */
-  gap: 5vw;
+  grid-auto-rows: minmax(00px, auto); /* altura mínima para las filas */
+  grid-auto-flow: dense;
+  gap: 4vw;
   width: 100%;
+  align-items: center;
 
-  padding: 20vh 5%;
+  padding: 15vh 4%;
 }
 
 @media (max-width: 768px) {
@@ -313,7 +289,8 @@ justify-content: flex-start;
 
 .project-grid-item img {
   width: 100%;
-  height: auto;
+  height: 85vh;      /* fuerza la altura de la imagen */
+  object-fit: cover; /* mantiene proporción y recorta si es necesario */
   display: block;
   transition: opacity 0.3s ease;
 }
@@ -328,12 +305,47 @@ justify-content: flex-start;
   transition: opacity 0.3s ease;
 }
 
+.projects-overlay {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;         /* que todas las filas ocupen igual altura */
+  gap: 5vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  align-items: center;         /* centra vertical en cada celda */
+  justify-items: center;       /* centra horizontal en cada celda */
+  z-index: 5;
+}
+
 .text-columns .text-col {
   width: 48%;
-  background: rgba(255,255,255,0.9);
   padding: 0.5rem;
 }
 
+.text-col {
+  width: 100%;                 /* ocupar toda la celda del grid */
+  height: 100%;                /* ocupar toda la altura de la fila */
+  padding: 1rem;
+  display: flex;
+  align-items: center;         /* centra vertical */
+  justify-content: center;     /* centra horizontal */
+  text-align: center;
+  pointer-events: none;
+}
+
+.text-col.column-text-title {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  -webkit-text-stroke: .2px black;
+}
+
+.text-col.column-text-tags {
+  font-size: var(--font-size-s);
+}
 
 /* === CONTAINER BASE === */
 .container {
@@ -636,12 +648,12 @@ a.project-item {
 }
 
 .text-right p {
-  line-height: var(--font-size-s);
+  line-height: var(--font-size-base);
     margin: 0px;
 }
 .text-right,
 .text-full {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
   line-height: var(--font-size-base);
 
 }
@@ -912,14 +924,14 @@ button.theme-toggle {
 }
 
 .footer-language button {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
 }
 
 .footer-language button:hover,
 .footer-language button.active  {
   text-decoration: underline;
     color: var(--color-text);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-base);
 }
 
 }
