@@ -75,7 +75,6 @@ header.header {
 }
 
 main {
-  margin-top: 8px;
     position: relative;
     z-index: 0;
     background-color: var(--color-bg);
@@ -197,7 +196,6 @@ svg {
 
   /* Espacio del contenido principal */
   main {
-    margin-top: 75px;
     width: 100%;
     box-sizing: border-box;
   }
