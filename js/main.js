@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: "thinmagazine",
       img: "/assets/images/web12.jpg",
       type: "web",
-      slug: "thinmagazine",
+      slug: "thinwebsite",
       title: "THIN MAGAZINE",
       tags: ["design and development", "users"],
     },
@@ -409,12 +409,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const fashionContainer = document.getElementById("fashion-projects");
   const graphicContainer = document.getElementById("graphic-projects");
   const webContainer = document.getElementById("web-projects");
-
-  const tooltip = document.getElementById("project-description");
-  const tooltipTitle = document.getElementById("tooltip-title");
-  const tooltipDescription = document.getElementById("tooltip-description");
-  const tooltipTags = document.getElementById("tooltip-tags");
-  const tooltipCTA = document.getElementById("tooltip-cta");
 
   const isMobile = window.innerWidth <= 768;
 
@@ -539,27 +533,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects(projects, fashionContainer);
   renderProjects(graphicProjects, graphicContainer);
   renderProjects(webProjects, webContainer);
-
-  // --- CARGAR SINGLE PROJECT ---
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("slug");
-  const type = params.get("type") || "fashion";
-
-  if (slug) {
-    fetch(`/projects/${type}/${slug}.json`)
-      .then((res) => {
-        if (!res.ok)
-          throw new Error(`No se encontró /projects/${type}/${slug}.json`);
-        return res.json();
-      })
-      .then((data) => {
-        document.getElementById("project-title").textContent = data.title || "";
-        document.getElementById("project-description").textContent =
-          data.description || "";
-        document.getElementById("project-image").src = data.img || "";
-      })
-      .catch((err) => console.error(err));
-  }
 
   // --- RENDER DE MÁS PROYECTOS ---
   function renderMoreProjects(allProjects, currentSlug) {

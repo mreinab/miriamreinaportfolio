@@ -423,6 +423,20 @@ span#credits {
   text-align: center;
 }
 
+
+
+/*LINK EXTERNO*/
+
+a#external-link {
+  text-decoration: none;
+  color: #0000EE;
+}
+
+a#external-link:hover {
+  text-decoration: underline;
+  color: #0000bc;
+}
+
 /* === METADATOS === */
 .project-meta {
   font-family: Arial, Helvetica, sans-serif;
