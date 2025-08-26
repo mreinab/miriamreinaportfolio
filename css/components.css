@@ -345,7 +345,7 @@ justify-content: flex-start;
 }
 
 .text-col.column-text-tags {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-s);
 }
 
 /* === CONTAINER BASE === */
