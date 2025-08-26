@@ -52,7 +52,7 @@
 /* HEADER */
 /* ----------------------------------- */
 .logo img {
-  height: 50px; /* o el alto que desees */
+  height: 65px; /* o el alto que desees */
   width: auto;
   display: block;
 }
@@ -254,7 +254,7 @@ nav.selector a:hover {
 .breadcrumb {
     display: flex;
     gap: 0.8rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 

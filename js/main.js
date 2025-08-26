@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "fashionstudentsreport",
       title: "FASHION STUDENTS REPORT",
-      tags: ["branding", "editorial design"],
+      tags: ["visual identity", "editorial design"],
     },
     {
       id: "thinmagazine",
@@ -381,16 +381,16 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "barcelonafashionweek",
       title: "080 BARCELONA FASHION WEEK",
-      tags: ["brand application", "visual design", "web"],
+      tags: ["brand application", "visual identity", "web"],
     },
-    {
-      id: "thelab",
-      img: "/assets/images/005.png",
-      type: "graphic",
-      slug: "thelab",
-      title: "THE LAB ",
-      tags: ["visual", "playground"],
-    },
+    //    {
+    //      id: "thelab",
+    //      img: "/assets/images/005.png",
+    //      type: "graphic",
+    //      slug: "thelab",
+    //      title: "THE LAB ",
+    //      tags: ["visual", "playground"],
+    //    },
   ];
 
   //WEB
