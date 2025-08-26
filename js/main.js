@@ -137,8 +137,8 @@ function initBreadcrumbs() {
     const slug = params.get("slug") || "";
 
     let categoryName = "";
-    if (type === "fashion") categoryName = "moda";
-    else if (type === "graphic") categoryName = "gráfico";
+    if (type === "fashion") categoryName = "fashion";
+    else if (type === "graphic") categoryName = "graphic";
     else if (type === "web") categoryName = "web dev";
 
     crumbs = [categoryName, slug.replace(/-/g, " ")];
@@ -148,8 +148,8 @@ function initBreadcrumbs() {
   }
 
   const urlMap = {
-    moda: "/fashion.html",
-    gráfico: "/graphic.html",
+    fashion: "/fashion.html",
+    graphic: "/graphic.html",
     "web dev": "/web.html",
   };
 
