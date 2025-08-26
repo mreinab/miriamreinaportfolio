@@ -217,12 +217,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultRight = Array.from(rightTexts).map((p) => p.textContent);
 
   const content = {
-    moda: {
+    fashion: {
       img: "/assets/images/project-2.jpg",
       left: ["", "", "styling"],
       right: ["creative direction", "", ""],
     },
-    gráfico: {
+    graphic: {
       img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg",
       left: ["art direction", "lettering", "branding"],
       right: ["editorial", "web design", "motion graphic"],
