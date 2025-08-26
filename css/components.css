@@ -754,6 +754,7 @@ svg {
   text-decoration: none;
   color: var(--color-text);
   margin-bottom: 5px;
+  font-size: var(--font-size-base);
 }
 
 .footer-bottom {
@@ -803,15 +804,19 @@ border-color: var(--color-border-light);
   color: var(--color-text);
 }
 
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
 
 .footer-nav a {
   text-align: end;
   font-family: var(--font-logo);
-  font-size: var(--font-size-l);
-    letter-spacing: 0.5px;
-  -webkit-text-stroke-width: .5px;
-  margin-bottom: 8px;
+  font-size: var(--font-size-base);
+  margin-bottom: 12px;
   color: var(--color-text);
+  -webkit-text-stroke: .2px black;
 }
 
 .footer-nav a:hover {
@@ -832,7 +837,7 @@ border-color: var(--color-border-light);
   background: none;
   border: none;
   cursor: pointer;
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
   justify-items: end;
   color: var(--color-text-lighter);
   font-family: var(--font-logo);
@@ -885,7 +890,7 @@ button.theme-toggle {
     justify-content: center;
     align-items: center;
     align-items: center;
-    gap: 16px;
+    margin-bottom: 30px;
   }
 
   .footer-bottom-container p {
@@ -908,12 +913,17 @@ button.theme-toggle {
 
 
   .logo-footer-container {
+    width: 100%;
   display: flex;
   justify-content: start;
 }
 
+.footer-left {
+  justify-content: center;
+  align-items: center;
+}
+
 .logo-index-footer {
-  max-width: 60%;
   height: auto;
   margin-bottom: 16px;
 }

@@ -126,9 +126,9 @@ function initBreadcrumbs() {
   if (path === "/" || path === "/index.html") {
     crumbs = []; // ya tienes "proyectos" en HTML
   } else if (path === "/fashion.html") {
-    crumbs = ["moda"];
+    crumbs = ["fashion"];
   } else if (path === "/graphic.html") {
-    crumbs = ["gráfico"];
+    crumbs = ["graphic"];
   } else if (path === "/web.html") {
     crumbs = ["web dev"];
   } else if (path === "/projects/singleproject.html") {
@@ -137,8 +137,8 @@ function initBreadcrumbs() {
     const slug = params.get("slug") || "";
 
     let categoryName = "";
-    if (type === "fashion") categoryName = "moda";
-    else if (type === "graphic") categoryName = "gráfico";
+    if (type === "fashion") categoryName = "fashion";
+    else if (type === "graphic") categoryName = "graphic";
     else if (type === "web") categoryName = "web dev";
 
     crumbs = [categoryName, slug.replace(/-/g, " ")];
@@ -148,8 +148,8 @@ function initBreadcrumbs() {
   }
 
   const urlMap = {
-    moda: "/fashion.html",
-    gráfico: "/graphic.html",
+    fashion: "/fashion.html",
+    graphic: "/graphic.html",
     "web dev": "/web.html",
   };
 
@@ -219,18 +219,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const content = {
     moda: {
       img: "/assets/images/project-2.jpg",
-      left: ["", "", "estilismo"],
-      right: ["dirección creativa", "", ""],
+      left: ["", "", "styling"],
+      right: ["creative direction", "", ""],
     },
     gráfico: {
       img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg",
-      left: ["", "lettering", "diseño editorial"],
-      right: ["branding", "diseño visual", ""],
+      left: ["art direction", "lettering", "branding"],
+      right: ["editorial", "web design", "motion graphic"],
     },
     web: {
       img: "/assets/images/web12.png",
-      left: ["UI Design", "Frontend", "Prototyping"],
-      right: ["UX", "Responsive", "Webflow"],
+      left: ["ux/ui", "design", "prototyping"],
+      right: ["frontend", "responsive", "interactive"],
     },
   };
 
@@ -312,60 +312,48 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "/assets/images/hanycoruna.gif",
       type: "fashion",
       slug: "hanycoruna",
-      title: "FITTING FOR HANNY",
+      title: "FITTINGS FOR HANNY",
       tags: ["styling", "post-production"],
-      top: "5.5%",
-      left: "6%",
     },
     {
       id: "juanvidal",
       img: "/assets/images/juanvidal-00-icon1.jpg",
       type: "fashion",
       slug: "juan-vidal",
-      title: "JUAN VIDAL CAMPAÑA DE NOVIA",
-      tags: ["dirección de arte", "dirección creativa"],
-      top: "5%",
-      left: "40%",
+      title: "JUAN VIDAL BRIDAL CAMPAIGN",
+      tags: ["art direction", "creative direction", "post-production"],
     },
     {
       id: "pablopuche",
       img: "/assets/images/pablopuche-00-icon.jpg",
       type: "fashion",
       slug: "pablopuche",
-      title: "TEST PARA ANNA E. · CARMEN DURAN",
-      tags: ["estilismo", "model test"],
-      top: "5%",
-      left: "73%",
+      title: "MODEL TEST FOR ANNA",
+      tags: ["styling"],
     },
     {
       id: "windable",
       img: "/assets/images/windable-icon-00.png",
       type: "fashion",
       slug: "windable",
-      title: "COLECCIÓN WINDABLE",
-      tags: ["estilismo", "post-producción"],
-      top: "20%",
-      left: "6%",
+      title: "WINDABLE COLLECTION",
+      tags: ["styling", "post-production"],
     },
     {
       id: "readytoconsume",
       img: "/assets/images/readytoconsume-00-icon.jpg",
       type: "fashion",
       slug: "readytoconsume",
-      title: "PRINTED EDITORIAL · READY-TO-CONSUME",
-      tags: ["estilismo", "dirección"],
-      top: "20%",
-      left: "40%",
+      title: "PRINTED EDITORIAL READY-TO-CONSUME",
+      tags: ["styling", "creative direction", "casting"],
     },
     {
       id: "collage",
       img: "/assets/images/collage-mobile.png",
       type: "fashion",
       slug: "collage",
-      title: "COLECCIÓN DE COLLAGES",
-      tags: ["mixed-media", "post-producción"],
-      top: "21.5%",
-      left: "71%",
+      title: "COLLAGE COLLECTION",
+      tags: ["mixed-media", "post-production"],
     },
   ];
 
@@ -377,9 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "barcelonafashionweek",
       title: "080 BARCELONA FASHION WEEK",
-      tags: ["brand application", "visual design"],
-      top: "5%",
-      left: "25%",
+      tags: ["brand application", "visual design", "web"],
     },
     {
       id: "thinmagazine",
@@ -387,19 +373,15 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "thinmagazine",
       title: "THIN MAGAZINE · DISEÑO EDITORIAL",
-      tags: ["branding", "editorial design"],
-      top: "5%",
-      left: "2%",
+      tags: ["branding", "editorial design", "web"],
     },
     {
       id: "thelab",
       img: "/assets/images/005.png",
       type: "graphic",
       slug: "thelab",
-      title: "THE LAB · RECOPILATORY",
-      tags: ["styling", "model test"],
-      top: "0%",
-      left: "5%",
+      title: "THE LAB ",
+      tags: ["my visual", "playground"],
     },
   ];
 
@@ -411,10 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "thinmagazine",
       title: "TEST FOR ANNE · AMODELS",
-
       tags: ["styling", "model test"],
-      top: "5%",
-      left: "25%",
     },
     {
       id: "miriamreina",
@@ -422,10 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "miriamreina",
       title: "TEST FOR ANNE · AMODELS",
-
       tags: ["styling", "model test"],
-      top: "15%",
-      left: "25%",
     },
     {
       id: "thefolder",
@@ -433,10 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "miriamreina",
       title: "TEST FOR ANNE · AMODELS",
-
       tags: ["styling", "model test"],
-      top: "15%",
-      left: "25%",
     },
   ];
 
