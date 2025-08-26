@@ -1,3 +1,4 @@
+//Cargar el Header
 function loadHeader() {
   const headerFile =
     window.location.pathname === "/about.html"
