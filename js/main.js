@@ -360,20 +360,28 @@ document.addEventListener("DOMContentLoaded", () => {
   //GRAFICO
   const graphicProjects = [
     {
-      id: "080barcelonafashionweek",
-      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg ",
+      id: "fashionstudentsreport",
+      img: "/assets/images/graphicdesign-s2s-icon.png",
       type: "graphic",
-      slug: "barcelonafashionweek",
-      title: "080 BARCELONA FASHION WEEK",
-      tags: ["brand application", "visual design", "web"],
+      slug: "fashionstudentsreport",
+      title: "FASHION STUDENTS REPORT",
+      tags: ["branding", "editorial design"],
     },
     {
       id: "thinmagazine",
-      img: "/assets/images/graphicdesign-thin-002.png",
+      img: "/assets/images/graphicdesign-thin-0022.png",
       type: "graphic",
       slug: "thinmagazine",
       title: "THIN MAGAZINE · DISEÑO EDITORIAL",
       tags: ["branding", "editorial design", "web"],
+    },
+    {
+      id: "080barcelonafashionweek",
+      img: "/assets/images/graphicdesign-080-icon.png ",
+      type: "graphic",
+      slug: "barcelonafashionweek",
+      title: "080 BARCELONA FASHION WEEK",
+      tags: ["brand application", "visual design", "web"],
     },
     {
       id: "thelab",
@@ -381,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "graphic",
       slug: "thelab",
       title: "THE LAB ",
-      tags: ["my visual", "playground"],
+      tags: ["visual", "playground"],
     },
   ];
 
