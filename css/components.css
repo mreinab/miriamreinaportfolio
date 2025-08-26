@@ -270,7 +270,7 @@ justify-content: flex-start;
   width: 100%;
   align-items: center;
 
-  padding: 15vh 4%;
+  padding: 20vh 4%;
 }
 
 @media (max-width: 768px) {

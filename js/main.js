@@ -1,4 +1,3 @@
-// Cargar header.html dinámicamente o headerabout.html
 function loadHeader() {
   const headerFile =
     window.location.pathname === "/about.html"
@@ -9,7 +8,31 @@ function loadHeader() {
     .then((res) => res.text())
     .then((html) => {
       // Insertar el HTML del header
-      document.getElementById("header-placeholder").innerHTML = html;
+      const headerPlaceholder = document.getElementById("header-placeholder");
+      headerPlaceholder.innerHTML = html;
+
+      // ======== INICIO: Header hide/show on scroll ========
+      let lastScroll = 0;
+      const headerEl =
+        headerPlaceholder.querySelector("header") ||
+        headerPlaceholder.firstElementChild;
+      if (headerEl) {
+        window.addEventListener("scroll", () => {
+          const currentScroll =
+            window.pageYOffset || document.documentElement.scrollTop;
+          if (currentScroll > lastScroll && currentScroll > 50) {
+            // Scrolling down
+            headerEl.style.transform = "translateY(-100%)";
+          } else {
+            // Scrolling up (mínimo movimiento)
+            headerEl.style.transform = "translateY(0)";
+          }
+          lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Evitar valores negativos
+        });
+        // Añadir transición suave
+        headerEl.style.transition = "transform 0.3s ease";
+      }
+      // ======== FIN: Header hide/show on scroll ========
 
       // Función para actualizar el logo según el tema activo
       function updateLogoBasedOnTheme() {

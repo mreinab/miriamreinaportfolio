@@ -152,3 +152,7 @@ p {
   color: var(--color-text);
   line-height: 0;
 }
+
+#header-placeholder {
+  transition: transform 0.3s ease; /* ejemplo */
+}
