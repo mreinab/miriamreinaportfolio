@@ -339,13 +339,13 @@ justify-content: flex-start;
 }
 
 .text-col.column-text-title {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  -webkit-text-stroke: .2px black;
+  -webkit-text-stroke: .3px black;
 }
 
 .text-col.column-text-tags {
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-base);
 }
 
 /* === CONTAINER BASE === */
