@@ -389,27 +389,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const webProjects = [
     {
       id: "thinmagazine",
-      img: "/assets/images/web-thin-icon.png",
+      img: "/assets/images/web12.jpg",
       type: "web",
       slug: "thinmagazine",
-      title: "TEST FOR ANNE · AMODELS",
-      tags: ["styling", "model test"],
+      title: "THIN MAGAZINE",
+      tags: ["design and development", "users"],
     },
     {
       id: "miriamreina",
-      img: "/assets/images/web-miriam-icon.png",
+      img: "/assets/images/web13.jpg",
       type: "web",
       slug: "miriamreina",
-      title: "TEST FOR ANNE · AMODELS",
-      tags: ["styling", "model test"],
-    },
-    {
-      id: "thefolder",
-      img: "/assets/images/web-miriam-icon2.png",
-      type: "web",
-      slug: "miriamreina",
-      title: "TEST FOR ANNE · AMODELS",
-      tags: ["styling", "model test"],
+      title: "MY PORTFOLIO",
+      tags: ["design and development", "responsive"],
     },
   ];
 
