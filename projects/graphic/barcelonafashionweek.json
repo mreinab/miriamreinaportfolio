@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "title": "080 BARCELONA FASHION WEEK · EXTENSIÓN DE IDENTIDAD VISUAL + AI ",
+  "title": "080 BARCELONA FASHION WEEK · VISUAL IDENTITY EXTENSION + AI",
   "coverImage": "/assets/images/graphicdesign-080barcelonafashionweek-icon.gif",
-  "description": "El proyecto parte del logotipo actual de la 080 Barcelona Fashion Week y plantea una extensión de su identidad visual para la edición 34 de la pasarela. El concepto se articula a través del slogan “Vive la moda desde dentro”, una invitación a mirar más allá del desfile y descubrir la esencia del backstage.Para dar forma a esta visión, se han empleado herramientas de inteligencia artificial en la creación de una serie de polaroids que recrean momentos capturados entre bambalinas, resaltando el valor del trabajo colectivo y creativo que sucede detrás de cada presentación.La propuesta visual se despliega en formatos diversos: desde mupis y cartelería, hasta redes sociales, web e invitaciones, con el objetivo de mostrar cómo la identidad puede adaptarse de manera coherente, flexible y contemporánea en diferentes soportes.",
+  "description": "The project builds on the current logo of 080 Barcelona Fashion Week and proposes an extension of its visual identity for the 34th edition of the runway. The concept is articulated through the slogan “Experience fashion from within,” an invitation to look beyond the catwalk and discover the essence of the backstage. To bring this vision to life, artificial intelligence tools were used to create a series of polaroids that recreate moments captured behind the scenes, highlighting the value of the collective and creative work that takes place before each show. The visual proposal unfolds across diverse formats: from billboards and posters to social media, web, and invitations, with the aim of showing how the identity can adapt in a coherent, flexible, and contemporary way across different platforms.",
   "cliente": "080 Barcelona Fashion Week",
-  "tipologia": "Dirección creativa, estilismo",
-  "sector": "Moda",
-  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "tipologia": "Campaign",
+  "sector": "Fashion",
+  "servicios": ["brand application", "visual identity", "web"],
   "sections": [
     {
       "layout": "column",

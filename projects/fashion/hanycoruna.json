@@ -12,6 +12,17 @@
         "elements": [
             {
             "type": "image",
+            "src": "/assets/images/hanycoruna-01.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+        {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
             "src": "/assets/images/hanycoruna-05.png",
             "class": "image-full",
             "full": true
@@ -61,18 +72,6 @@
             "full": true
             }
         ]
-        },
-        {
-        "layout": "column",
-        "elements": [
-            {
-            "type": "image",
-            "src": "/assets/images/hanycoruna-bts1.png",
-            "class": "image-full",
-            "full": true
-            }
-        ]
         }
-    ],
-    "credits": "Fotografía Ionela Bona [@linboni] · Asistente de estilismo María Coppola [@mc._______] · Talent Lydia Abadía [@_lydiabadia"
-    }
+    ]
+}
