@@ -1,18 +1,18 @@
     {
-    "year": "2024",
+    "year": "2025",
     "title": "EDITORIAL",
     "coverImage": "/assets/images/hanycoruna-bg.gif",
     "cliente": "-",
-    "tipologia": "Fotografía",
-    "sector": "Moda",
-    "servicios": ["Estilismo","Dirección creativa","Post-producción"],
+    "tipologia": "Fitting",
+    "sector": "Fashion",
+    "servicios": ["styling","post-producción"],
     "sections": [
-        {
+                {
         "layout": "column",
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/hanycoruna-01.png",
+            "src": "/assets/images/hanycoruna-03.png",
             "class": "image-full",
             "full": true
             }
@@ -23,7 +23,7 @@
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/hanycoruna-05.png",
+            "src": "/assets/images/hanycoruna-01.png",
             "class": "image-full",
             "full": true
             }
@@ -45,29 +45,18 @@
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/hanycoruna.jpg",
-            "class": "image-full",
-            "full": true
-            }
-        ]
-        },
-        {
-        "layout": "column",
-        "elements": [
-            {
-            "type": "image",
-            "src": "/assets/images/hanycoruna-03.png",
-            "class": "image-full",
-            "full": true
-            }
-        ]
-        },
-        {
-        "layout": "column",
-        "elements": [
-            {
-            "type": "image",
             "src": "/assets/images/hanycoruna-04.png",
+            "class": "image-full",
+            "full": true
+            }
+        ]
+        },
+                {
+        "layout": "column",
+        "elements": [
+            {
+            "type": "image",
+            "src": "/assets/images/hanycoruna-05.png",
             "class": "image-full",
             "full": true
             }

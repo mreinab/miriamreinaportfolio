@@ -1,23 +1,23 @@
     {
     "year": "2024",
-    "title": "WINDABLE COLECCIÓN",
-    "coverImage": "/assets/images/windable-bg.png",
+    "title": "WINDABLE COLLECTION",
+    "coverImage": "/assets/images/windable-bg.jpg",
     "cliente": "-",
-    "tipologia": "Fotografía",
-    "sector": "Moda",
-    "servicios": ["Estilismo","Dirección creativa","Post-producción"],
+    "tipologia": "Photography",
+    "sector": "Fashion",
+    "servicios": ["styling","creative direction","post-production"],
     "sections": [
         {
         "layout": "row",
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/windable-02.png",
+            "src": "/assets/images/windable-02.jpg",
             "class": "image-left"
             },
             {
             "type": "image",
-            "src": "/assets/images/windable-01.png",
+            "src": "/assets/images/windable-01.jpg",
             "class": "image-right"
             }
         ]
@@ -27,7 +27,7 @@
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/windable-03.png",
+            "src": "/assets/images/windable-03.jpg",
             "class": "image-full",
             "full": true
             }
@@ -38,7 +38,7 @@
         "elements": [
             {
             "type": "image",
-            "src": "/assets/images/windable-04.png",
+            "src": "/assets/images/windable-04.jpg",
             "class": "image-full",
             "full": true
             }

@@ -1,12 +1,12 @@
 {
   "year": "2024",
-  "title": "TEST PARA ANNA · CARMEN DURAN",
-  "coverImage": "/assets/images/pablopuche-annetest-bg.png",
-  "description": "Fotos de book/test realizadas en estudio por el fotógrafo valenciano Pablo Puche [@pablopuche] para la modelo holandesa Anna Elisabeth Eikendal [@annaeikendal], representada por la agencia Carmen Duran.",
-  "cliente": "Agencia de modelos Carmen Duran",
-  "tipologia": "Test Modelo",
-  "sector": "Moda",
-  "servicios": ["Estilismo"],
+  "title": "TEST FOR ANNA",
+  "coverImage": "/assets/images/pablopuche-00-icon.png",
+  "description": "Studio test/book photos taken by Valencia-based photographer Pablo Puche [@pablopuche] for Dutch model Anna Elisabeth Eikendal [@annaeikendal], represented by the Carmen Duran agency.",
+  "cliente": "Carmen Duran Model Agency",
+  "tipologia": "Model test",
+  "sector": "Fashion",
+  "servicios": ["styling"],
   "sections": [
     {
       "layout": "column",

@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
       right: ["creative direction", "", ""],
     },
     graphic: {
-      img: "/assets/images/graphicdesign-080barcelonafashionweek-icon.jpg",
+      img: "/assets/images/graphicdesign-magazine.jpg",
       left: ["art direction", "lettering", "branding"],
       right: ["editorial", "web design", "motion graphic"],
     },
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       id: "windable",
-      img: "/assets/images/windable-icon-00.png",
+      img: "/assets/images/windable-icon-00.jpg",
       type: "fashion",
       slug: "windable",
       title: "WINDABLE COLLECTION",

@@ -1,19 +1,19 @@
 {
   "year": "2024",
-  "title": "JUAN VIDAL · CAMPAÑA DE NOVIA",
-  "coverImage": "/assets/images/juanvidal-bg.png",
-  "description": "Campaña de lanzamiento de la primera colección de vestidos de novia de Juan Vidal, firma madrileña reconocida por su visión contemporánea y femenina, nace de la colaboración con el Máster de Estilismo y Dirección Creativa de Barreira, Valencia. El proyecto se desarrolla en formato de fotografía de estudio, enriquecida con técnicas de collage y mixed-media, explorando nuevas formas de narrar el universo nupcial desde una perspectiva artística.",
+  "title": "JUAN VIDAL BRIDAL CAMPAIGN",
+  "coverImage": "/assets/images/juanvidal-bg.jpg",
+  "description": "Launch campaign for the first bridal collection by Juan Vidal, a Madrid-based brand renowned for its contemporary and feminine vision, born from the collaboration with the Master’s in Styling and Creative Direction at Barreira, Valencia. The project unfolds through studio photography, enriched with collage and mixed-media techniques, exploring new ways of narrating the bridal universe from an artistic perspective.",
   "cliente": "Juan Vidal",
-  "tipologia": "Campaña de moda",
-  "sector": "Novias",
-  "servicios": ["Dirección de arte", "Dirección creativa", "Casting", "Postproducción"],
+  "tipologia": "Campaign",
+  "sector": "Bridal",
+  "servicios": ["art direction", "creative direction", "casting", "post-production"],
   "sections": [
       {
       "layout": "column",
       "elements": [
         {
           "type": "image",
-          "src": "/assets/images/juanvidal-bg.jpg",
+          "src": "/assets/images/juanvidal.jpg",
           "class": "image-full",
           "full": true
         }
