@@ -433,6 +433,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderProjects(projectList, targetContainer) {
     if (!targetContainer) return;
 
+    // --- bandera de hover activado ---
+    let hoverEnabled = false;
+
+    // Listener para activar hover cuando el usuario mueva el ratón conscientemente
+    const mouseMoveHandler = () => {
+      hoverEnabled = true;
+      targetContainer.removeEventListener("mousemove", mouseMoveHandler);
+    };
+    targetContainer.addEventListener("mousemove", mouseMoveHandler);
+
     // Limpiar contenedor
     targetContainer.innerHTML = "";
 
@@ -470,12 +480,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Hover
       item.addEventListener("mouseenter", () => {
-        // Ocultar otros
+        if (!hoverEnabled) return; // <-- NO hacer nada hasta que el usuario mueva el ratón
+
+        // TODO: Aquí va toda tu lógica original de hover sin cambiar nada
         Array.from(grid.children).forEach((child) => {
           if (child !== item) child.style.opacity = "0";
         });
 
-        // Crear textos dentro del mismo item
         const titleCol = document.createElement("div");
         titleCol.className = "text-col column-text-title";
         titleCol.textContent = project.title;
@@ -484,7 +495,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tagsCol.className = "text-col column-text-tags";
         tagsCol.textContent = project.tags ? project.tags.join(" + ") : "";
 
-        // Posición absoluta dentro del item
         titleCol.style.position = "absolute";
         tagsCol.style.position = "absolute";
 
@@ -517,22 +527,10 @@ document.addEventListener("DOMContentLoaded", () => {
         Array.from(grid.children).forEach(
           (child) => (child.style.opacity = "1")
         );
+
         if (item._titleCol) {
           item.removeChild(item._titleCol);
           item.removeChild(item._tagsCol);
-          item._titleCol = null;
-          item._tagsCol = null;
-        }
-      });
-
-      item.addEventListener("mouseleave", () => {
-        Array.from(grid.children).forEach(
-          (child) => (child.style.opacity = "1")
-        );
-
-        if (item._titleCol) {
-          overlay.removeChild(item._titleCol);
-          overlay.removeChild(item._tagsCol);
           item._titleCol = null;
           item._tagsCol = null;
         }
