@@ -225,9 +225,16 @@ justify-content: flex-start;
 
     .nav-span.muststaymobile {
     display: flex;
-    color: var(--color-bg);
+    color: var(--color-border-dark);
     font-size: var(--font-size-l);
+    font-weight: normal;
   }
+
+span.nav-span.different {
+      display: flex;
+    color: black;
+  font-size: var(--font-size-l);
+}
 
   .nav-span {
     display: none;

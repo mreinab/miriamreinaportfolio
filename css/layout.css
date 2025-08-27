@@ -418,7 +418,10 @@ nav.selector a:hover {
     text-align: center;
     font-size: 2rem;
     gap: 1.5vh;
+    mix-blend-mode: difference;
+    color: var(--color-bg);
 }
+
 
 .mobile-nav a {
   font-family: var(--font-logo);
@@ -614,6 +617,21 @@ body.dark-mode .theme-toggle__dark-side {
 
   .footer-language {
     height: fit-content;
+  }
+
+  .about-text-container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    margin: 0px
+  }
+  
+  .who, .tools, .contact {
+    width: 100%;
+  }
+
+  .about-text .title-text {
+    line-height: var(--font-size-xl);
   }
 }
 
