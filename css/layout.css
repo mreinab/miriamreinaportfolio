@@ -138,7 +138,7 @@ svg {
 }
 
 .logo img {
-  height: 4.5vh; /* o el alto que desees */
+  height: 5vh;
   width: auto;
   display: block;
 }
@@ -151,7 +151,6 @@ svg {
     padding: 0 24px;
   }
 
-  /* Cada enlace de proyecto */
   .dual-link-mobile {
     display: flex;
     flex-direction: column;
@@ -303,7 +302,7 @@ nav.selector a:hover {
 .hamburger a.main-nav-toggle {
   display: flex;
   justify-content: space-evenly;
-  width: 28px;
+  width: 24px;
   height: 16px;
   position: relative;
   cursor: pointer;
@@ -400,6 +399,7 @@ nav.selector a:hover {
 
 .mobile-menu.active {
   display: flex;
+  justify-content: center;
 }
 
 .menu-header {
@@ -417,14 +417,13 @@ nav.selector a:hover {
     gap: 1rem;
     text-align: center;
     font-size: 2rem;
-    gap: 5vh;
+    gap: 1.5vh;
 }
 
 .mobile-nav a {
   font-family: var(--font-logo);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-medium);
-  letter-spacing: 0.3px;
   -webkit-text-stroke: 0.5px black;
   color: inherit;
   cursor: pointer;

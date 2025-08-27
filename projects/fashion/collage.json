@@ -1,28 +1,13 @@
 {
   "year": "2025",
-  "title": "COLECCIÓN DE COLLAGES",
-  "coverImage": "/assets/images/collage-bg.gif",
-  "description": "El collage forma parte de mi proceso como creativa, pero sobre todo como estilista, y ha terminado por convertirse en una extensión de mi lenguaje visual. Esta colección reúne collages digitales y escaneos en distintos formatos, concebidos como un espacio de experimentación con texturas, combinaciones de color y narrativas, funcionando como etapa previa a tener las prendas en persona.",
+  "title": "COLLAGE COLLECTION",
+  "coverImage": "/assets/images/collage-mobile-bg.png",
+  "description": "Collage is part of my process as a creative, but above all as a stylist, and it has become an extension of my visual language. This collection brings together digital collages and scans in different formats, conceived as a space for experimentation with textures, color combinations, and narratives, serving as a preliminary stage before having the clothing garments in person.",
   "cliente": "-",
-  "tipologia": "Dirección de arte",
-  "sector": "Creatividad",
-  "servicios": ["Dirección de arte", "Estilismo", "Post-producción"],
+  "tipologia": "Hobby",
+  "sector": "-",
+  "servicios": ["creative direction", "Estilismo", "Post-producción"],
   "sections": [
-    {
-      "layout": "row",
-      "elements": [
-        {
-          "type": "image",
-          "src": "/assets/images/collage.png",
-          "class": "image-left"
-        },
-        {
-          "type": "image",
-          "src": "/assets/images/collage-01.png",
-          "class": "image-right"
-        }
-      ]
-    },
       {
       "layout": "column",
       "elements": [
@@ -39,13 +24,28 @@
       "elements": [
         {
           "type": "image",
-          "src": "/assets/images/collage-04.jpg",
+          "src": "/assets/images/collage-bg.png",
           "class": "image-full",
           "full": true
         }
       ]
-    },
+      },
           {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage.png",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-01.png",
+          "class": "image-right"
+        }
+      ]
+    },
+      {
       "layout": "column",
       "elements": [
         {

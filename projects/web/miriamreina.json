@@ -1,0 +1,32 @@
+{
+  "year": "2024",
+  "title": "MY PORTFOLIO",
+  "coverImage": "/assets/images/web13-bg.png",
+  "description": "",
+  "servicios": ["frontend development", "figma design", "responsive"],
+  "link": "https://miriamreina.com",
+  "sections": [
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/web-miriamreinaportfolio-01.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/web-miriamreinaportfolio-02.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    }    
+  ]
+}

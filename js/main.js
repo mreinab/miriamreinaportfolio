@@ -331,22 +331,22 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "MODEL TEST FOR ANNA",
       tags: ["styling"],
     },
-    {
-      id: "windable",
-      img: "/assets/images/windable-icon-00.jpg",
-      type: "fashion",
-      slug: "windable",
-      title: "WINDABLE COLLECTION",
-      tags: ["styling", "post-production"],
-    },
-    {
-      id: "readytoconsume",
-      img: "/assets/images/readytoconsume-00-icon.jpg",
-      type: "fashion",
-      slug: "readytoconsume",
-      title: "PRINTED EDITORIAL READY-TO-CONSUME",
-      tags: ["styling", "creative direction", "casting"],
-    },
+    //    {
+    //      id: "windable",
+    //      img: "/assets/images/windable-icon-00.jpg",
+    //      type: "fashion",
+    //      slug: "windable",
+    //      title: "WINDABLE COLLECTION",
+    //      tags: ["styling", "post-production"],
+    //    },
+    //    {
+    //      id: "readytoconsume",
+    //      img: "/assets/images/readytoconsume-00-icon.jpg",
+    //      type: "fashion",
+    //      slug: "readytoconsume",
+    //      title: "PRINTED EDITORIAL READY-TO-CONSUME",
+    //      tags: ["styling", "creative direction", "casting"],
+    //    },
     {
       id: "collage",
       img: "/assets/images/collage-mobile.png",
@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "web",
       slug: "miriamreina",
       title: "MY PORTFOLIO",
-      tags: ["design and development", "responsive"],
+      tags: ["design", "development", "responsive"],
     },
   ];
 

@@ -210,12 +210,23 @@ justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 16px;
+    gap: 1vh;
   }
 
   .nav-index a {
     font-size: var(--font-size-m);
     line-height: var(--font-size-base);
+  }
+
+  .nav-span.muststay {
+    display: flex;
+    color: var(--color-text-lighter);
+  }
+
+    .nav-span.muststaymobile {
+    display: flex;
+    color: var(--color-bg);
+    font-size: var(--font-size-l);
   }
 
   .nav-span {

@@ -1,9 +1,9 @@
 {
   "year": "2024",
   "title": "THIN, THE MAGAZINE",
-  "coverImage": "/assets/images/web122.jpg",
+  "coverImage": "/assets/images/web12-bg.png",
   "description": "",
-  "servicios": ["Dirección de arte", "Estilismo", "Casting"],
+  "servicios": ["frontend development", "figma design", "responsive"],
   "link": "https://thinmagazine.netlify.app",
   "sections": [
     {
@@ -11,11 +11,34 @@
       "elements": [
         {
           "type": "image",
-          "src": "/assets/images/web12.jpg",
+          "src": "/assets/images/web-thinmagazine-01.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/web-thinmagazine-02.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/web-thinmagazine-03.jpg",
           "class": "image-full",
           "full": true
         }
       ]
     }
+    
   ]
 }
