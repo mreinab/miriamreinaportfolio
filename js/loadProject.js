@@ -132,6 +132,9 @@ async function loadProject(slug, type) {
 
     // Render dinámico de secciones
     renderSections(data.sections, data.title);
+
+    // 🚀 Cargar más proyectos de la misma tipología
+    await loadMoreProjects(slug, type);
   } catch (err) {
     console.error("Error al cargar el proyecto:", err);
   }
@@ -267,4 +270,33 @@ function renderSections(sections, title) {
 
     container.appendChild(sectionDiv);
   });
+}
+async function loadMoreProjects(currentSlug, type) {
+  try {
+    // Seleccionamos el array correcto según el type
+    let projectsArray = [];
+    if (type === "fashion") projectsArray = projects;
+    if (type === "graphic") projectsArray = graphicProjects;
+    if (type === "web") projectsArray = webProjects;
+
+    const container = document.getElementById("more-projects-scroll");
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    projectsArray
+      .filter((p) => p.slug !== currentSlug) // no repetimos el actual
+      .forEach((p) => {
+        const div = document.createElement("div");
+        div.classList.add("project-card");
+        div.innerHTML = `
+          <a href="?slug=${p.slug}&type=${type}">
+            <img src="${p.img}" alt="${p.title}">
+          </a>
+        `;
+        container.appendChild(div);
+      });
+  } catch (err) {
+    console.error("Error al cargar más proyectos:", err);
+  }
 }

@@ -302,117 +302,92 @@ function initMenuToggle() {
   });
 }
 
+// --- LISTADO DE PROYECTOS ---
+// MODA
+window.projects = [
+  {
+    id: "hanyucoruna",
+    img: "/assets/images/hanycoruna.gif",
+    type: "fashion",
+    slug: "hanycoruna",
+    title: "FITTINGS FOR HANNY",
+    tags: ["styling", "post-production"],
+  },
+  {
+    id: "juanvidal",
+    img: "/assets/images/juanvidal-00-icon1.jpg",
+    type: "fashion",
+    slug: "juan-vidal",
+    title: "JUAN VIDAL BRIDAL CAMPAIGN",
+    tags: ["art direction", "creative direction", "post-production"],
+  },
+  {
+    id: "pablopuche",
+    img: "/assets/images/pablopuche-00-icon.jpg",
+    type: "fashion",
+    slug: "pablopuche",
+    title: "MODEL TEST FOR ANNA",
+    tags: ["styling"],
+  },
+  {
+    id: "collage",
+    img: "/assets/images/collage-mobile.png",
+    type: "fashion",
+    slug: "collage",
+    title: "COLLAGE COLLECTION",
+    tags: ["mixed-media", "post-production"],
+  },
+];
+
+// GRAFICO
+window.graphicProjects = [
+  {
+    id: "fashionstudentsreport",
+    img: "/assets/images/graphicdesign-s2s-icon.png",
+    type: "graphic",
+    slug: "fashionstudentsreport",
+    title: "FASHION STUDENTS REPORT",
+    tags: ["visual identity", "editorial design"],
+  },
+  {
+    id: "thinmagazine",
+    img: "/assets/images/graphicdesign-thin-0022.png",
+    type: "graphic",
+    slug: "thinmagazine",
+    title: "THIN MAGAZINE · DISEÑO EDITORIAL",
+    tags: ["branding", "editorial design", "web"],
+  },
+  {
+    id: "080barcelonafashionweek",
+    img: "/assets/images/graphicdesign-080-icon.png",
+    type: "graphic",
+    slug: "barcelonafashionweek",
+    title: "080 BARCELONA FASHION WEEK",
+    tags: ["brand application", "visual identity", "web"],
+  },
+];
+
+// WEB
+window.webProjects = [
+  {
+    id: "thinmagazine",
+    img: "/assets/images/web12.jpg",
+    type: "web",
+    slug: "thinwebsite",
+    title: "THIN MAGAZINE",
+    tags: ["design and development", "users"],
+  },
+  {
+    id: "miriamreina",
+    img: "/assets/images/web13.jpg",
+    type: "web",
+    slug: "miriamreina",
+    title: "MY PORTFOLIO",
+    tags: ["design", "development", "responsive"],
+  },
+];
+
 document.addEventListener("DOMContentLoaded", () => {
-  // --- LISTADO DE PROYECTOS ---
-
-  //MODA
-  const projects = [
-    {
-      id: "hanyucoruna",
-      img: "/assets/images/hanycoruna.gif",
-      type: "fashion",
-      slug: "hanycoruna",
-      title: "FITTINGS FOR HANNY",
-      tags: ["styling", "post-production"],
-    },
-    {
-      id: "juanvidal",
-      img: "/assets/images/juanvidal-00-icon1.jpg",
-      type: "fashion",
-      slug: "juan-vidal",
-      title: "JUAN VIDAL BRIDAL CAMPAIGN",
-      tags: ["art direction", "creative direction", "post-production"],
-    },
-    {
-      id: "pablopuche",
-      img: "/assets/images/pablopuche-00-icon.jpg",
-      type: "fashion",
-      slug: "pablopuche",
-      title: "MODEL TEST FOR ANNA",
-      tags: ["styling"],
-    },
-    //    {
-    //      id: "windable",
-    //      img: "/assets/images/windable-icon-00.jpg",
-    //      type: "fashion",
-    //      slug: "windable",
-    //      title: "WINDABLE COLLECTION",
-    //      tags: ["styling", "post-production"],
-    //    },
-    //    {
-    //      id: "readytoconsume",
-    //      img: "/assets/images/readytoconsume-00-icon.jpg",
-    //      type: "fashion",
-    //      slug: "readytoconsume",
-    //      title: "PRINTED EDITORIAL READY-TO-CONSUME",
-    //      tags: ["styling", "creative direction", "casting"],
-    //    },
-    {
-      id: "collage",
-      img: "/assets/images/collage-mobile.png",
-      type: "fashion",
-      slug: "collage",
-      title: "COLLAGE COLLECTION",
-      tags: ["mixed-media", "post-production"],
-    },
-  ];
-
-  //GRAFICO
-  const graphicProjects = [
-    {
-      id: "fashionstudentsreport",
-      img: "/assets/images/graphicdesign-s2s-icon.png",
-      type: "graphic",
-      slug: "fashionstudentsreport",
-      title: "FASHION STUDENTS REPORT",
-      tags: ["visual identity", "editorial design"],
-    },
-    {
-      id: "thinmagazine",
-      img: "/assets/images/graphicdesign-thin-0022.png",
-      type: "graphic",
-      slug: "thinmagazine",
-      title: "THIN MAGAZINE · DISEÑO EDITORIAL",
-      tags: ["branding", "editorial design", "web"],
-    },
-    {
-      id: "080barcelonafashionweek",
-      img: "/assets/images/graphicdesign-080-icon.png ",
-      type: "graphic",
-      slug: "barcelonafashionweek",
-      title: "080 BARCELONA FASHION WEEK",
-      tags: ["brand application", "visual identity", "web"],
-    },
-    //    {
-    //      id: "thelab",
-    //      img: "/assets/images/005.png",
-    //      type: "graphic",
-    //      slug: "thelab",
-    //      title: "THE LAB ",
-    //      tags: ["visual", "playground"],
-    //    },
-  ];
-
-  //WEB
-  const webProjects = [
-    {
-      id: "thinmagazine",
-      img: "/assets/images/web12.jpg",
-      type: "web",
-      slug: "thinwebsite",
-      title: "THIN MAGAZINE",
-      tags: ["design and development", "users"],
-    },
-    {
-      id: "miriamreina",
-      img: "/assets/images/web13.jpg",
-      type: "web",
-      slug: "miriamreina",
-      title: "MY PORTFOLIO",
-      tags: ["design", "development", "responsive"],
-    },
-  ];
-
   // --- CONTENEDORES ---
   const fashionContainer = document.getElementById("fashion-projects");
   const graphicContainer = document.getElementById("graphic-projects");
@@ -424,30 +399,23 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderProjects(projectList, targetContainer) {
     if (!targetContainer) return;
 
-    // --- bandera de hover activado ---
     let hoverEnabled = false;
-
-    // Listener para activar hover cuando el usuario mueva el ratón conscientemente
     const mouseMoveHandler = () => {
       hoverEnabled = true;
       targetContainer.removeEventListener("mousemove", mouseMoveHandler);
     };
     targetContainer.addEventListener("mousemove", mouseMoveHandler);
 
-    // Limpiar contenedor
     targetContainer.innerHTML = "";
 
-    // Contenedor principal
     const wrapper = document.createElement("div");
     wrapper.style.position = "relative";
     targetContainer.appendChild(wrapper);
 
-    // Grid
     const grid = document.createElement("div");
     grid.className = "projects-grid";
     wrapper.appendChild(grid);
 
-    // Overlay para los textos
     const overlay = document.createElement("div");
     overlay.className = "projects-overlay";
     overlay.style.position = "absolute";
@@ -455,7 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.style.left = "0";
     overlay.style.width = "100%";
     overlay.style.height = "100%";
-    overlay.style.pointerEvents = "none"; // que no interfiera con hover
+    overlay.style.pointerEvents = "none";
     wrapper.appendChild(overlay);
 
     projectList.forEach((project, index) => {
@@ -469,11 +437,9 @@ document.addEventListener("DOMContentLoaded", () => {
       img.draggable = false;
       item.appendChild(img);
 
-      // Hover
       item.addEventListener("mouseenter", () => {
-        if (!hoverEnabled) return; // <-- NO hacer nada hasta que el usuario mueva el ratón
+        if (!hoverEnabled) return;
 
-        // TODO: Aquí va toda tu lógica original de hover sin cambiar nada
         Array.from(grid.children).forEach((child) => {
           if (child !== item) child.style.opacity = "0";
         });
@@ -490,7 +456,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tagsCol.style.position = "absolute";
 
         const col = (index % 3) + 1;
-
         if (col === 1) {
           titleCol.style.left = "110%";
           tagsCol.style.left = "220%";
@@ -518,7 +483,6 @@ document.addEventListener("DOMContentLoaded", () => {
         Array.from(grid.children).forEach(
           (child) => (child.style.opacity = "1")
         );
-
         if (item._titleCol) {
           item.removeChild(item._titleCol);
           item.removeChild(item._tagsCol);
@@ -527,7 +491,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Click
       item.addEventListener("click", () => {
         if (!project.slug || !project.type) return;
         window.location.href = `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`;
@@ -538,34 +501,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- RENDERIZADO ---
-  renderProjects(projects, fashionContainer);
-  renderProjects(graphicProjects, graphicContainer);
-  renderProjects(webProjects, webContainer);
-
-  // --- RENDER DE MÁS PROYECTOS ---
-  function renderMoreProjects(allProjects, currentSlug) {
-    const container = document.getElementById("more-projects-scroll");
-    if (!container) return;
-
-    allProjects
-      .filter((project) => project.slug && project.slug !== currentSlug)
-      .forEach((project) => {
-        const img = document.createElement("img");
-        img.src = project.img;
-        img.alt = project.title || project.id;
-        img.addEventListener("click", () => {
-          window.location.href = `/projects/singleproject.html?type=${project.type}&slug=${project.slug}`;
-        });
-        container.appendChild(img);
-      });
-  }
-
-  // --- Ejecutar la función ---
-  if (slug) {
-    renderMoreProjects(projects, slug);
-    // si quieres todos los tipos:
-    // renderMoreProjects([...projects, ...graphicProjects, ...webProjects], slug);
-  }
+  renderProjects(window.projects, fashionContainer);
+  renderProjects(window.graphicProjects, graphicContainer);
+  renderProjects(window.webProjects, webContainer);
 });
 
 // Footer cargar
