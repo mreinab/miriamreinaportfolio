@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
       right: ["editorial", "web design", "motion graphic"],
     },
     web: {
-      img: "/assets/images/web12.png",
+      img: "/assets/images/webdev-index.jpg",
       left: ["ux/ui", "design", "prototyping"],
       right: ["frontend", "responsive", "interactive"],
     },
