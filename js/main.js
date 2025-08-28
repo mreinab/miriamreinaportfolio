@@ -310,7 +310,7 @@ window.projects = [
     img: "/assets/images/hanycoruna.gif",
     type: "fashion",
     slug: "hanycoruna",
-    title: "FITTINGS FOR HANNY",
+    title: "FITTINGS FOR HANI",
     tags: ["styling", "post-production"],
   },
   {
