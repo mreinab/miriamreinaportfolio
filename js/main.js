@@ -309,7 +309,7 @@ window.projects = [
     id: "hanyucoruna",
     img: "/assets/images/hanycoruna.gif",
     type: "fashion",
-    slug: "hanycoruna",
+    slug: "fittingsforhani",
     title: "FITTINGS FOR HANI",
     tags: ["styling", "post-production"],
   },
