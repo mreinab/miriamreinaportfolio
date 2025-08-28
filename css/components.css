@@ -771,6 +771,12 @@ div#more-projects-container {
   color: var(--color-text);
 }
 
+.footer-socials img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .footer-right {
   display: flex;
   flex-direction: column;
@@ -894,6 +900,13 @@ button.theme-toggle {
 }
 
 @media (max-width: 768px) {
+
+  .footer-socials img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
   div#more-projects-container {
   margin: 0px 0px 40px;
 }
