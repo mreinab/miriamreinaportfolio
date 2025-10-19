@@ -306,6 +306,14 @@ function initMenuToggle() {
 // MODA
 window.projects = [
   {
+    id: "stfashionshow",
+    img: "/assets/images/stfashionshow-bg.jpg",
+    type: "fashion",
+    slug: "stfashionshow",
+    title: "ST GRADUATE SHOW",
+    tags: ["photography", "backstage"],
+  },
+  {
     id: "hanyucoruna",
     img: "/assets/images/hanycoruna.gif",
     type: "fashion",

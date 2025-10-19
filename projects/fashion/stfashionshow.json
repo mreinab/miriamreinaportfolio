@@ -1,0 +1,140 @@
+{
+  "year": "2025",
+  "title": "ST FASHION SHOW",
+  "coverImage": "/assets/images/stfashionshow-bg.jpg",
+  "description": "Collage is part of my process as a creative, but above all as a stylist, and it has become an extension of my visual language. This collection brings together digital collages and scans in different formats, conceived as a space for experimentation with textures, color combinations, and narratives, serving as a preliminary stage before having the clothing garments in person.",
+  "cliente": "-",
+  "tipologia": "Hobby",
+  "sector": "-",
+  "servicios": ["creative direction", "Estilismo", "Post-producción"],
+  "sections": [
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-03.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-bg.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      },
+          {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage.png",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-01.png",
+          "class": "image-right"
+        }
+      ]
+    },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-05.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-09.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+    {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-14.jpg",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+        {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-06.gif",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-15.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+    },          {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-17.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      },
+    {
+      "layout": "row",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-15.jpg",
+          "class": "image-left"
+        },
+        {
+          "type": "image",
+          "src": "/assets/images/collage-16.jpg",
+          "class": "image-right"
+        }
+      ]
+    },
+      {
+      "layout": "column",
+      "elements": [
+        {
+          "type": "image",
+          "src": "/assets/images/collage-18.png",
+          "class": "image-full",
+          "full": true
+        }
+      ]
+      }
+  ]
+}
