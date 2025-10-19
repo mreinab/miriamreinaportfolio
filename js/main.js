@@ -18,20 +18,24 @@ function loadHeader() {
         headerPlaceholder.querySelector("header") ||
         headerPlaceholder.firstElementChild;
       if (headerEl) {
-        window.addEventListener("scroll", () => {
-          const currentScroll =
-            window.pageYOffset || document.documentElement.scrollTop;
-          if (currentScroll > lastScroll && currentScroll > 50) {
-            // Scrolling down
-            headerEl.style.transform = "translateY(-100%)";
-          } else {
-            // Scrolling up (mínimo movimiento)
-            headerEl.style.transform = "translateY(0)";
-          }
-          lastScroll = currentScroll <= 0 ? 0 : currentScroll; // Evitar valores negativos
-        });
-        // Añadir transición suave
-        headerEl.style.transition = "transform 0.3s ease";
+        const isMobile = window.innerWidth <= 768; // Definimos mobile como ancho <= 768px
+
+        if (!isMobile) {
+          // Solo aplicar hide/show si NO es mobile
+          window.addEventListener("scroll", () => {
+            const currentScroll =
+              window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+              // Scrolling down
+              headerEl.style.transform = "translateY(-100%)";
+            } else {
+              // Scrolling up
+              headerEl.style.transform = "translateY(0)";
+            }
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+          });
+          headerEl.style.transition = "transform 0.3s ease";
+        }
       }
       // ======== FIN: Header hide/show on scroll ========
 
